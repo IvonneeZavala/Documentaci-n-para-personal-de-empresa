@@ -20,7 +20,6 @@ Para su correcto funcionamiento, es necesario que la información ingresada por 
 <ul style="text-align: justify;">
   <li>Automatiza la generación de correos con la cotización lista, reduciendo la carga operativa del equipo de ventas y los tiempos de respuesta para el cliente</li>
   <li>Garantiza la captura precisa de la información del cliente y del producto solicitado a través de campos obligatorios y filtros configurados en el formato cotizador</li>
-  <li>Mantiene la captación y respuesta de cotizaciones activa</li>
   <li>Permite capturar y procesar cotizaciones en cualquier momento aumentando la capacidad de atención de la empresa</li>
 </ul>
 
