@@ -58,3 +58,5 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
   <li><b>Envío de Cotización Formal:</b> Adjunta el desglose económico en Excel, fechas sugeridas de pago y entrega, e instrucciones para la liquidación.</li>
   <li><b>Alerta de Revisión Técnica (Sector Salud / BLAST):</b> En caso de detectar coincidencias de alta similitud en la base de datos biológica, el sistema redirige la solicitud al área de Síntesis para una revisión manual y evaluación de viabilidad previa al procesamiento.</li>
 </ul>
+
+### ¿Cómo lo hace?
