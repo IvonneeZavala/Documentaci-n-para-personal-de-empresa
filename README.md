@@ -1,5 +1,5 @@
 # Documentación para personal de la empresa
-Una introducción a la plataforma coT4, qué es, su creación y funcionamiento
+Una introducción a la plataforma coT4, qué es, su creación y funcionamiento.
 
 ### ¿Qué es la plataforma coT4? 
 
@@ -12,7 +12,7 @@ La plataforma permite optimizar el flujo de información entre el cliente y las 
 </p>
 
 <p align="justify">
-Para su correcto funcionamiento, es necesario que la información ingresada por parte del usuario en el formato sea completa y precisa, ya que los datos proporcionados constituyen la base para el procesamiento y cálculo de la cotización.
+Para su correcto funcionamiento, es necesario que la información ingresada por parte del usuario en el formato sea completa y precisa, ya que los datos proporcionados constituyen la base para el procesamiento y cálculo de la cotización por la plataforma.
 </p>
 
 **Impacto Operativo:**
@@ -25,32 +25,32 @@ Para su correcto funcionamiento, es necesario que la información ingresada por 
 </ul>
 
 <p align="justify">
-### ¿Cómo funciona la plataforma? 
+
 
 ### ¿Cómo funciona la plataforma?
 
 <p align="justify">
-La plataforma opera como un flujo de trabajo digital automatizado que procesa solicitudes de cotización desde la captura inicial de datos por parte del cliente hasta la generación de su ticket de compra
+La plataforma opera como un flujo de trabajo digital automatizado que procesa solicitudes de cotización desde la captura inicial de datos por parte del cliente hasta el procesamiento completo.
 </p>
 
 **1. Captura e Ingreso de Datos**
 <p align="justify">
-El proceso inicia cuando el cliente descarga la plantilla del formato cotizador e ingresa la información requerida (datos del solicitante, envío, facturación y especificaciones técnicas de la secuencia) mediante campos de texto manuales y menús desplegables estandarizados. Una vez completado, el archivo es cargado en la plataforma para su procesamiento.
+El proceso inicia cuando el cliente descarga la plantilla del formato cotizador e ingresa la información requerida (datos del solicitante, envío, facturación y especificaciones técnicas del producto solicitado) mediante campos de texto manuales y menús desplegables. Una vez completado, el archivo es cargado en la plataforma para su procesamiento.
 </p>
 
-**2. Procesamiento de la Interfaz y Validación Comercial**
+**2. Procesamiento de la Interfaz y Validación**
 <p align="justify">
 Al enviar el formulario, el sistema ajusta dinámicamente el estado del proceso a ejecución ("Processing") y valida la información y datos ingresados. La plataforma interpreta los parámetros del producto (tipo de síntesis, cantidad, escala, purificación, longitud y modificaciones 5' y 3') para realizar el cálculo automático de precios de acuerdo a la base de datos, o bien asigna una atención manual para productos especiales (como T4BRICK™ o T4GENE™ RNA).
 </p>
 
 **3. Análisis Bioinformático de Seguridad (Integración con BLAST)**
 <p align="justify">
-Como parte del control, las secuencias ingresadas son analizadas de forma automatizada mediante la herramienta bioinformática BLAST (Basic Local Alignment Search Tool). El sistema compara la secuencia solicitada contra bases de datos biológicas registradas para evaluar el alineamiento, identidad y significancia estadística (como la detección de patógenos o secuencias del sector salud).
+Como parte del control de calidad y sector salud, las secuencias ingresadas son analizadas de forma automática mediante la herramienta bioinformática BLAST (Basic Local Alignment Search Tool). El sistema compara la secuencia solicitada contra bases de datos biológicas registradas para evaluar el alineamiento, identidad y significancia estadística (como la detección de patógenos o secuencias del sector salud).
 </p>
 
-**4. Generación y Notificación Automatizada**
+**4. Generación y Notificación Automática**
 <p align="justify">
-Una vez procesada la información, la plataforma gestiona el envío automático de notificaciones vía correo electrónico según el estado de la solicitud:
+Una vez procesada la información, la plataforma gestiona el envío automático de notificaciones vía correo electrónico según el estado de la solicitud del usuario:
 </p>
 
 <ul style="text-align: justify;">
