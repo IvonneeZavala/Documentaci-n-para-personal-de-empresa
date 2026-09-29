@@ -59,3 +59,4 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
 </ul>
 
 ### ¿Cómo lo hace?
+Errores
