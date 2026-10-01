@@ -29,7 +29,7 @@ Para su correcto funcionamiento, es necesario que la información ingresada por 
 ### ¿Cómo funciona la plataforma?
 
 <p align="justify">
-La plataforma opera como un flujo de trabajo digital automatico que procesa solicitudes de cotización desde la captura inicial de datos por parte del cliente hasta el procesamiento completo.
+La plataforma opera como un flujo de trabajo digital automático que procesa solicitudes de cotización desde la captura inicial de datos por parte del usuario hasta el procesamiento completo.
 </p>
 
 **1. Captura e Ingreso de Datos**
@@ -53,14 +53,70 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
 </p>
 
 <ul style="text-align: justify;">
-  <li><b>Emisión de Ticket de Compra:</b> Genera de manera inmediata el desglose detallado de costos por producto (costo de secuencia, purificación, modificaciones y asignación de ID único de operación).</li>
+  <li><b>Envío de Ticket de Compra:</b> Genera de manera inmediata el desglose detallado de costos por producto (costo de secuencia, purificación, modificaciones y asignación de ID único de operación).</li>
   <li><b>Envío de Cotización Formal:</b> Adjunta el desglose económico en Excel, fechas sugeridas de pago y entrega, e instrucciones para la liquidación.</li>
-  <li><b>Alerta de Revisión Técnica (Sector Salud / BLAST):</b> En caso de detectar coincidencias de alta similitud en la base de datos biológica, el sistema redirige la solicitud al área de Síntesis para una revisión manual y evaluación de viabilidad previa al procesamiento.</li>
+  <li><b>Detección de secuencias, Notificación Blast (Sector Salud / BLAST):</b> En caso de detectar coincidencias de alta similitud en la base de datos biológica, el sistema redirige la solicitud al área de Síntesis para una revisión manual y evaluación de viabilidad previa al procesamiento.</li>
 </ul>
 
+
+
 ### ¿Cómo lo hace?
+<p align="justify">
+   
+   ---
+   
 ### Tiempo de prueba
+   <p align="justify">
+Se hizo una prueba general con 406 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones y se registro los formatos en los cuales se llevo a cabo la cotización de manera correcta y en cuales arrojo error, se reviso cada formato y verifico si fue por formato anterior o formato actualizado, también se registro los errores mas presentes por parte del usuario en el formato anterior y como se releja la solución en el nuevo formato cotizador
+
+**Resultados**
+
+Las variaciones puden ser las siguientes:
+<table>
+  <tr>
+    <th style="background-color: black; color: white;">Formato</th>
+    <th style="background-color: black; color: white;">Cotización</th>
+  </tr>
+  <tr>
+    <td style="background-color: #e99698;"><b>Anterior</b></td>
+    <td style="background-color: #a9c5f0;"><b>Correcta</b></td>
+  </tr>
+  <tr>
+    <td style="background-color: #efff80;"><b>Diferente</b></td>
+    <td style="background-color: #efff80;"><b>Otro</b></td>
+  </tr>
+  <tr>
+    <td style="background-color: #a9c5f0;"><b>Correcto</b></td>
+    <td style="background-color: #e99698;"><b>Error</b></td>
+  </tr>
+</table>
+
+* Formato Anterior: No cuenta con las listas desplegables
+
+* Formato correcto: Cuenta los las listas desplegables y seguros para el correcto ingreso de información por el usuario
+
+
+<img width="518" height="320" alt="Recuento de cotizaciones" src="https://github.com/user-attachments/assets/c8090ea2-aed7-4721-88f4-79d706ede965" />
+
+De un total de 411 cotizaciones el 80.9% fueron correctas y cotizadas con éxito, las cuales corresponden a cotizaciones realizadas con el nuevo formato actualizado, el 19.1% restante fueron cotizaciones erróneas que fueron hechas con el formato antiguo.
+
+
+
+También existen casos especiales en que la cotización no puede concluir de manera exitosa usando el formato anterior o actualizado
+Ejemplos:
+* Solicitud de productos no específicos del catálogo que requieren una cotización manual, ya sea que no se encuentren en la base de datos de cualquiera de los dos formatos.
+* Modificaciones por el usuario del formato cotizador. Ej: Eliminar filas, agregar cuadros, etc.
+* Valores o caracteres no válidos por el formato anterior
+
+<img width="600" height="371" alt="Uso incorrecto del formato " src="https://github.com/user-attachments/assets/cde79fbb-21d1-4c77-8771-dcc0733c2bb1" />
+
+
+El 8.5% del total de las cotizaciones presentan un error debido a alguna anomalía ajena al formato cotizador.
+
 ### Errores
+errores mas comunes 
+
+
 ### Solución de problemas
 ### Resguardo de datos personales
 
