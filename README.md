@@ -4,7 +4,7 @@ Una introducción a la plataforma coT4, qué es, su creación y funcionamiento.
 ### ¿Qué es la plataforma coT4? 
 
 <p align="justify">
-Cotizador en línea comercial diseñado para optimizar el proceso de venta y atención al cliente, una cotización inmediata que transforma rápidamente la solicitud del cliente en un ticket de compra a través de su correo electrónico.
+   Cotizador en línea comercial diseñado para optimizar el proceso de venta y atención al cliente, una cotización inmediata que transforma rápidamente la solicitud del cliente en un ticket de compra a través de su correo electrónico.
 </p>
 
 <p align="justify">
@@ -29,7 +29,7 @@ Para su correcto funcionamiento, es necesario que la información ingresada por 
 ### ¿Cómo funciona la plataforma?
 
 <p align="justify">
-La plataforma opera como un flujo de trabajo digital automatizado que procesa solicitudes de cotización desde la captura inicial de datos por parte del cliente hasta el procesamiento completo.
+La plataforma opera como un flujo de trabajo digital automatico que procesa solicitudes de cotización desde la captura inicial de datos por parte del cliente hasta el procesamiento completo.
 </p>
 
 **1. Captura e Ingreso de Datos**
@@ -59,4 +59,11 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
 </ul>
 
 ### ¿Cómo lo hace?
-Errores
+### Tiempo de prueba
+### Errores
+### Solución de problemas
+### Resguardo de datos personales
+
+
+
+
