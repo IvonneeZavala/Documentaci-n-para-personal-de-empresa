@@ -51,7 +51,7 @@ Como parte del control de calidad y sector salud, las secuencias ingresadas son 
 <p align="justify">
 Una vez procesada la información, la plataforma gestiona el envío automático de notificaciones vía correo electrónico según el estado de la solicitud del usuario:
 </p>
-
+<p align="justify">
 <ul style="text-align: justify;">
   <li><b>Envío de Ticket de Compra:</b> Genera de manera inmediata el desglose detallado de costos por producto (costo de secuencia, purificación, modificaciones y asignación de ID único de operación).</li>
   <li><b>Envío de Cotización Formal:</b> Adjunta el desglose económico en Excel, fechas sugeridas de pago y entrega, e instrucciones para la liquidación.</li>
@@ -67,11 +67,14 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
    
 ### Tiempo de prueba
    <p align="justify">
-Se hizo una prueba general con 406 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones y se registro los formatos en los cuales se llevo a cabo la cotización de manera correcta y en cuales arrojo error, se reviso cada formato y verifico si fue por formato anterior o formato actualizado, también se registro los errores mas presentes por parte del usuario en el formato anterior y como se releja la solución en el nuevo formato cotizador
+
+Se realizaron dos revisiones de las cotizaciones en tiempos diferentes, la primera prueba fue de manera automática en la cual la plataforma de cotización recibía los formatos de llenado uno tras otro y se generaban los correos electrónicos con la respuesta de su cotización, esto para obtener una revisión previa de manera automatiada y rapida.
+<p align="justify">
+La segunda prueba se realizo de manera manual, esto para generar un registro mas especifico de los resultados, se hizo una prueba general con 411 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones, se cargo en la plataforma de uno por uno de los formatos y se realizo un registro en cuales se llevo a cabo la cotización de manera correcta y en cuales arrojo error, se reviso cada formato y verifico si fue por formato anterior o formato actualizado, también se registro los errores mas presentes por parte del usuario en el llenado del formato anterior y como se releja la solución en el nuevo formato cotizador.
 
 **Resultados**
 
-Las variaciones puden ser las siguientes:
+Las variaciones posibles:
 <table>
   <tr>
     <th style="background-color: black; color: white;">Formato</th>
@@ -98,10 +101,12 @@ Las variaciones puden ser las siguientes:
 
 <img width="518" height="320" alt="Recuento de cotizaciones" src="https://github.com/user-attachments/assets/c8090ea2-aed7-4721-88f4-79d706ede965" />
 
+<p align="justify">
 De un total de 411 cotizaciones el 80.9% fueron correctas y cotizadas con éxito, las cuales corresponden a cotizaciones realizadas con el nuevo formato actualizado, el 19.1% restante fueron cotizaciones erróneas que fueron hechas con el formato antiguo.
 
 
-
+<p align="justify">
+   
 También existen casos especiales en que la cotización no puede concluir de manera exitosa usando el formato anterior o actualizado
 Ejemplos:
 * Solicitud de productos no específicos del catálogo que requieren una cotización manual, ya sea que no se encuentren en la base de datos de cualquiera de los dos formatos.
@@ -111,10 +116,12 @@ Ejemplos:
 <img width="600" height="371" alt="Uso incorrecto del formato " src="https://github.com/user-attachments/assets/cde79fbb-21d1-4c77-8771-dcc0733c2bb1" />
 
 
-El 8.5% del total de las cotizaciones presentan un error debido a alguna anomalía ajena al formato cotizador.
+El 8.5% del total de las cotizaciones presentan un error debido a alguna anomalía ajena al formato cotizador debido al uso incorrecto.
 
 ### Errores
-errores mas comunes 
+Las cotizaciones que no se pudieron concluir de manera exitosa y marcaron como error, presentan un patrón marcado en ser realizadas con el formato de llenado anterior, el cual no cuenta con las listas despegables y el usuario tenia mayor libertad para realizar el llenado de este que resulta de una manera incorrecta.
+
+Del total de todas las cotizaciones solo un 
 
 
 ### Solución de problemas
