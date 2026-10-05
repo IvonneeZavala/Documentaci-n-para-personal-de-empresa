@@ -25,6 +25,7 @@ Para su correcto funcionamiento, es necesario que la información ingresada por 
 
 <p align="justify">
 
+---
 
 ### ¿Cómo funciona la plataforma?
 
@@ -72,6 +73,8 @@ Se realizaron dos revisiones de las cotizaciones en tiempos diferentes, la prime
 <p align="justify">
 La segunda prueba se realizo de manera manual, esto para generar un registro mas especifico de los resultados, se hizo una prueba general con 411 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones, se cargo en la plataforma de uno por uno de los formatos y se realizo un registro en cuales se llevo a cabo la cotización de manera correcta y en cuales arrojo error, se reviso cada formato y verifico si fue por formato anterior o formato actualizado, también se registro los errores mas presentes por parte del usuario en el llenado del formato anterior y como se releja la solución en el nuevo formato cotizador.
 
+---
+
 **Resultados**
 
 Las variaciones posibles:
@@ -118,6 +121,8 @@ Ejemplos:
 
 El 8.5% del total de las cotizaciones presentan un error debido a alguna anomalía ajena al formato cotizador debido al uso incorrecto.
 
+---
+
 ### Errores
 <p align="justify">
 El 19.1% de cotizaciones que no se pudieron concluir de manera exitosa y marcaron como error, presentan un patrón marcado en ser realizadas con el formato de llenado anterior, el cual no cuenta con las listas despegables y el usuario tenia mayor libertad para realizar el llenado de este que resulta de una manera incorrecta.
@@ -138,11 +143,17 @@ Ejemplos de los errores mas rrecurrentes:
 
 <img width="915" height="336" alt="image" src="https://github.com/user-attachments/assets/ef60b13f-c9d5-40a7-983c-461d649b02d0" />
 
+---
 
 ### Solución de problemas
 
 <p align="justify">
-Los errores mas frecuentes ya identificados por los cuales no es posible cerrar la cotización con éxito corresponden al formato cotizador anterior, las modificaciones realizadas en el formato actualizado  se diseñaron de manera que estos errores por parte del usuario ya no fueran posibles.
+Los errores mas frecuentes ya identificados por los cuales no es posible cerrar la cotización con éxito corresponden al formato cotizador anterior, las modificaciones realizadas en el formato actualizado  se diseñaron de manera que estos errores por parte del usuario ya no fueran posibles con la implementación de campos de llenado de caracter obligatorio, listas despegables y seguros.
+
+<p align="center">
+  <img width="1107" height="472" alt="image" src="https://github.com/user-attachments/assets/9f1200d8-7a70-4a5b-b367-47c504f2cc17" />
+</p>
+
 
 El nuevo formato al contar con las listas despegables no permitirá el ingreso de otra información que no se encuentre en la base de datos para la generación de la cotización, si el usuario desea un producto que no se encuentre en el catalogo de la lista posra conractar al equipo de ventas ya que requerira de una cotiación manual.
 
