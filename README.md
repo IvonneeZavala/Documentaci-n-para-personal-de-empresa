@@ -119,14 +119,36 @@ Ejemplos:
 El 8.5% del total de las cotizaciones presentan un error debido a alguna anomalía ajena al formato cotizador debido al uso incorrecto.
 
 ### Errores
-Las cotizaciones que no se pudieron concluir de manera exitosa y marcaron como error, presentan un patrón marcado en ser realizadas con el formato de llenado anterior, el cual no cuenta con las listas despegables y el usuario tenia mayor libertad para realizar el llenado de este que resulta de una manera incorrecta.
+<p align="justify">
+El 19.1% de cotizaciones que no se pudieron concluir de manera exitosa y marcaron como error, presentan un patrón marcado en ser realizadas con el formato de llenado anterior, el cual no cuenta con las listas despegables y el usuario tenia mayor libertad para realizar el llenado de este que resulta de una manera incorrecta.
 
-Del total de todas las cotizaciones solo un 
+Del total de todas las cotizaciones erróneas solo se presento un caso en el cual el formato utilizado fue el actualizado y la cotización fue errónea, esto debido a una modificación en el formato en su estructura por parte del usuario
+
+El resto de las cotizaciones erróneas corresponden al uso del formato anterior con modificaciones y llenado incorrecto con caracteres no validos.
+
+Ejemplos de los errores mas rrecurrentes:
+
+1. Solicitudes de productos que equieren de una cotización manual dado qe no se encuentran en la base de datos
+
+
+<img width="1157" height="185" alt="image" src="https://github.com/user-attachments/assets/e5034764-359c-48ea-b249-c4db1d8ed0b6" />
+<img width="1231" height="188" alt="image" src="https://github.com/user-attachments/assets/1ad9c543-5976-469a-b66c-b18b7d9c7148" />
+
+2. Ingreso incompleto y caracteres no validos
+
+<img width="915" height="336" alt="image" src="https://github.com/user-attachments/assets/ef60b13f-c9d5-40a7-983c-461d649b02d0" />
 
 
 ### Solución de problemas
-### Resguardo de datos personales
 
+<p align="justify">
+Los errores mas frecuentes ya identificados por los cuales no es posible cerrar la cotización con éxito corresponden al formato cotizador anterior, las modificaciones realizadas en el formato actualizado  se diseñaron de manera que estos errores por parte del usuario ya no fueran posibles.
+
+El nuevo formato al contar con las listas despegables no permitirá el ingreso de otra información que no se encuentre en la base de datos para la generación de la cotización, si el usuario desea un producto que no se encuentre en el catalogo de la lista posra conractar al equipo de ventas ya que requerira de una cotiación manual.
+
+En el caso de ingreso de caracteres no validos también se ve restringido por el nuevo formato cotizador ya que contiene seguros y solo se podrá ingresar de manera correcta.
+
+El uso exitoso del formato actualizado se puede reflejar en que el total de 411 cotizaciones el 80.9% fueron correctas y cotizadas con éxito, las cuales corresponden a cotizaciones realizadas con el nuevo formato actualizado y todas las cotizaciones realizadas con el nuevo formato actualizado fueron correctas a excepción de solo un formato el cual fue modificado en su estructura.  
 
 
 
