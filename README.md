@@ -121,7 +121,10 @@ Se cargo en la plataforma de uno por uno de los formatos y se realizo un registr
   
 De acuerdo con los registros de la prueba, se obtuvieron los siguientes resultados:
 
+
 <img width="670" height="304" alt="image" src="https://github.com/user-attachments/assets/d3842552-8c7c-4822-9d44-0cb11607a273" />
+
+Gráfico 1. Resultados de intentos registrados por etapa.
 
 <p align="justify">
 En la etapa de revisión se registraron 2,570 procesamientos completados correctamente y 90 con algún tipo de fallo. Posteriormente, durante la generación de cotizaciones, se registraron 1,385 procesos completados y 786 fallos.
@@ -201,6 +204,9 @@ Variaciones posibles:
 
 <img width="518" height="320" alt="Recuento de cotizaciones" src="https://github.com/user-attachments/assets/c8090ea2-aed7-4721-88f4-79d706ede965" />
 
+Gráfico 2. Recuento de cotizaciones.
+
+
 <p align="justify">
 De un total de 411 cotizaciones el 80.9% fueron correctas y cotizadas con éxito, las cuales corresponden a cotizaciones realizadas con el nuevo formato actualizado, el 19.1% restante fueron cotizaciones erróneas que fueron hechas con el formato antiguo.
 
@@ -215,6 +221,7 @@ Ejemplos:
 
 <img width="600" height="371" alt="Uso incorrecto del formato " src="https://github.com/user-attachments/assets/cde79fbb-21d1-4c77-8771-dcc0733c2bb1" />
 
+Gráfico 3. Uso incorrecto del formato.
 
 El 8.5% del total de las cotizaciones presentan un error debido a alguna anomalía ajena al formato cotizador debido al uso incorrecto.
 
@@ -227,30 +234,28 @@ El resto de las cotizaciones erróneas o no concluidas corresponden al uso del f
 
 * **Factores que impiden una cotización exitosa por la plataforma**
 
-1. Solicitudes de productos que requieren de una cotización manual dado que no se encuentran en la base de datos
+1. Solicitudes de productos que requieren de una cotización manual dado que no se encuentran en la base de datos de la plataforma
 
 **Ejemplo:**
-<img width="1157" height="185" alt="image" src="https://github.com/user-attachments/assets/e5034764-359c-48ea-b249-c4db1d8ed0b6" />
-<img width="1231" height="188" alt="image" src="https://github.com/user-attachments/assets/1ad9c543-5976-469a-b66c-b18b7d9c7148" />
 
-Debido a que el cotizador automatizado funciona con productos previamente registrados en su base de datos, cuando el usuario solicita un producto que no se encuentra disponible en dicha base, el sistema no puede identificarlo y, por lo tanto, no puede generar automáticamente su cotización.
+Figura 1.
+<img width="1445" height="232" alt="imagen" src="https://github.com/user-attachments/assets/e552f215-04a0-42bf-bc4b-4d41cc92493d" />
+Figura 2.
+<img width="1535" height="230" alt="imagen" src="https://github.com/user-attachments/assets/85c83225-940e-4a28-8aea-0e8d42b28057" />
+
+<p align="justify">
+Este tipo de situaciones marcara como error por la plataforma y no precisamente porque sea  incorrecta la solicitud del uduario o sea imposible la cotización del producto solicitado, el problema persiste en que debido a que el cotizador funciona con productos previamente registrados en su base de datos, cuando el usuario solicita un producto que no se encuentra disponible en dicha base, el sistema no puede identificarlo y, por lo tanto, no puede generar automáticamente su cotización.
+
 En estos casos, la solicitud debe ser atendida mediante una cotización manual, especialmente cuando se trata de productos especiales o que requieren una configuración que no se encuentra contemplada en el cotizador.
-Ejemplos
-En el formato mostrado en la figura 1 se solicitaron los siguientes productos:
+
+En el formato mostrado en la figura 1 y figura 2 se solicitaron los siguientes productos:
 - GIGAscript™ RT
 - NextPure ViroBac
 Estos productos no se encuentran disponibles dentro de la base de datos utilizada por el cotizador, por lo que la plataforma no puede asociarlos con un producto registrado ni determinar automáticamente su precio.
 
-**¿Cómo debe realizarse?**
-
-Cuando se requiera un producto que no se encuentra en la base de datos:
-1. No se debe intentar sustituir el producto por otro diferente.
-2. Se debe conservar la información del producto solicitado.
-3. La solicitud debe canalizarse para realizar una cotización manual.
-4. Si se trata de un producto especial o una síntesis/configuración particular, debe solicitarse la revisión correspondiente.
-
 2. Ingreso incorrecto y caracteres no validos
 
+Figura 3.
 <img width="915" height="336" alt="image" src="https://github.com/user-attachments/assets/ef60b13f-c9d5-40a7-983c-461d649b02d0" />
 
 
@@ -262,8 +267,9 @@ Cuando se requiera un producto que no se encuentra en la base de datos:
 ### Solución de problemas
 
 <p align="justify">
-Los errores mas frecuentes ya identificados por los cuales no es posible cerrar la cotización con éxito corresponden al formato cotizador anterior, las modificaciones realizadas en el formato actualizado  se diseñaron de manera que estos errores por parte del usuario ya no fueran posibles con la implementación de campos de llenado de caracter obligatorio, listas despegables y seguros.
-
+Los situaciones mas frecuentes ya identificados por los cuales no es posible cerrar la cotización con éxito corresponden al formato cotizador anterior, las modificaciones realizadas en el formato actualizado  se diseñaron de manera que estos errores por parte del usuario ya no fueran posibles con la implementación de campos de llenado de caracter obligatorio, listas despegables y seguros.
+   
+Figura 4. 
 <p align="center">
   <img width="1107" height="472" alt="image" src="https://github.com/user-attachments/assets/9f1200d8-7a70-4a5b-b367-47c504f2cc17" />
 </p>
