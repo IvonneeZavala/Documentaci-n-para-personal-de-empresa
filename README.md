@@ -73,12 +73,12 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
 
 Se realizaron dos revisiones de las cotizaciones en tiempos diferentes, una de manera automatizada y otra de manera manual cada una con objetivos diferentes.
 
-* #### Cotización automatizada
+* ### Cotización automatizada
 
 <p align="justify">
-El objetivo de esta primera prueba fue para comprobar si la plataforma cumplía su función, verificar que los archivos pudieran ser procesados correctamente, que la información válida pudiera utilizarse para generar una cotización y detectar los principales errores que podían presentarse durante el proceso y como podia mejorarse, saber cuales son las metricas en tiempos de cotización y obtener un recuento de ls cotizaciones exitosas y erroneas.
+El objetivo de esta primera prueba fue para comprobar si la plataforma cumplía su función, verificar que los archivos pudieran ser procesados correctamente, que la información válida pudiera utilizarse para generar una cotización y detectar los principales errores que podían presentarse durante el proceso y como podía mejorarse, saber cuales son las métricas en tiempos de cotización y obtener un recuento de ls cotizaciones exitosas y erróneas.
 
-   **Desarrollo de la prueba**
+   -- **Desarrollo de la prueba** --
    
 <p align="justify">
 La prueba se realizó mediante un flujo dividido en dos etapas principales:
@@ -87,8 +87,9 @@ La prueba se realizó mediante un flujo dividido en dos etapas principales:
 
 <p align="justify">
 En esta etapa se procesaron los archivos de Excel del formato de llenado para comprobar que contaran con la información y estructura necesarias para que la plataforma pudiera continuar con la cotización.
-
-Los archivos que cumplían con las condiciones requeridas continuaban al siguiente proceso, mientras que aquellos que presentaban alguna anomalia eran registrados como fallidos junto con la información disponible sobre el problema.
+   
+<p align="justify">
+Los archivos que cumplían con las condiciones requeridas continuaban al siguiente proceso, mientras que aquellos que presentaban alguna anomalía eran registrados como fallidos junto con la información disponible sobre el problema.
 
 **2.  Generación de la cotización**
 
@@ -99,12 +100,12 @@ Los formatos que superaban la etapa de revisión pasaban al proceso de cálculo 
 Cada intento era registrado como completado o fallido. En los casos exitosos se registraba también el tiempo empleado para realizar el cálculo.
 
 
-* #### Cotiación manual
+* ### Cotiación manual
   
 <p align="justify">
 Esta segunda prueba se realizo de manera manual con el objetivo de recaudar mayor información sobre el uso correcto e incorrecto del formato de llenado por parte del usuario y el uso del nuevo formato cotizador y su respuesta, esto para generar un registro mas especifico de los resultados.
 
-**Desarrollo de la prueba**
+-- **Desarrollo de la prueba** --
 
 <p align="justify">
 Se realizo una prueba general con un total de 411 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones 
@@ -114,19 +115,18 @@ Se cargo en la plataforma de uno por uno de los formatos y se realizo un registr
 
 ---
 
-**Resultados**
+### **Resultados**
 
-* #### Cotización automatizada
+* ### Cotización automatizada
   
 De acuerdo con los registros de la prueba, se obtuvieron los siguientes resultados:
 
 <img width="670" height="304" alt="image" src="https://github.com/user-attachments/assets/d3842552-8c7c-4822-9d44-0cb11607a273" />
 
-
 <p align="justify">
 En la etapa de revisión se registraron 2,570 procesamientos completados correctamente y 90 con algún tipo de fallo. Posteriormente, durante la generación de cotizaciones, se registraron 1,385 procesos completados y 786 fallos.
 
-**Principales errores encontrados**
+* **Factores que impiden una cotización exitosa por la plataforma**
 
 <p align="justify">
 Durante la revisión de los formatos se identificaron 90 registros de fallo. Los problemas encontrados con mayor frecuencia fueron:
@@ -168,27 +168,31 @@ Esta prueba automatizada permitió comprobar el funcionamiento del flujo de proc
 <p align="justify">
 Los resultados muestran que la plataforma es capaz de procesar los formatos y generar cotizaciones en una parte importante de los casos evaluados. Asimismo, las pruebas permitieron detectar errores frecuentes relacionados principalmente con productos no identificados, información incompleta y formatos cuya estructura no corresponde con la esperada por el sistema.
 
-* #### Cotización manual
+* ### Cotización manual
 
-Las variaciones posibles:
+De acuerdo con el registro que se realizo de manera manual, se obtuvieron los siguientes resultados:
+
+Variaciones posibles:
+
 <table>
   <tr>
     <th style="background-color: black; color: white;">Formato</th>
     <th style="background-color: black; color: white;">Cotización</th>
   </tr>
   <tr>
-    <td style="background-color: #e99698;"><b>Anterior</b></td>
-    <td style="background-color: #a9c5f0;"><b>Correcta</b></td>
+    <td style="background-color: #e99698;">Anterior</td>
+    <td style="background-color: #a9c5f0;">Correcta</td>
   </tr>
   <tr>
-    <td style="background-color: #efff80;"><b>Diferente</b></td>
-    <td style="background-color: #efff80;"><b>Otro</b></td>
+    <td style="background-color: #efff80;">Diferente</td>
+    <td style="background-color: #efff80;">Otro</td>
   </tr>
   <tr>
-    <td style="background-color: #a9c5f0;"><b>Correcto</b></td>
-    <td style="background-color: #e99698;"><b>Error</b></td>
+    <td style="background-color: #a9c5f0;">Correcto</td>
+    <td style="background-color: #e99698;">Error</td>
   </tr>
 </table>
+
 
 * Formato Anterior: No cuenta con las listas desplegables
 
@@ -214,21 +218,18 @@ Ejemplos:
 
 El 8.5% del total de las cotizaciones presentan un error debido a alguna anomalía ajena al formato cotizador debido al uso incorrecto.
 
----
-
-### Errores
 <p align="justify">
-El 19.1% de cotizaciones que no se pudieron concluir de manera exitosa y marcaron como error, presentan un patrón marcado en ser realizadas con el formato de llenado anterior, el cual no cuenta con las listas despegables y el usuario tenia mayor libertad para realizar el llenado de este que resulta de una manera incorrecta.
+El 19.1% de cotizaciones que no se pudieron concluir de manera exitosa y marcaron como error en la plataforma, presentan un patrón marcado en ser realizadas con el formato de llenado anterior, el cual no cuenta con las listas despegables y el usuario tenia mayor libertad para realizar el llenado de este que resulta de una manera incorrecta.
 
-Del total de todas las cotizaciones erróneas solo se presento un caso en el cual el formato utilizado fue el actualizado y la cotización fue errónea, esto debido a una modificación en el formato en su estructura por parte del usuario
+Del total de todas las cotizaciones no concluidas solo se presento un caso en el cual el formato utilizado fue el actualizado y la cotización fue errónea, esto debido a una modificación en el formato en su estructura por parte del usuario
 
-El resto de las cotizaciones erróneas corresponden al uso del formato anterior con modificaciones y llenado incorrecto con caracteres no validos.
+El resto de las cotizaciones erróneas o no concluidas corresponden al uso del formato anterior con modificaciones y llenado incorrecto con caracteres no validos.
 
-Ejemplos de los errores mas rrecurrentes:
+* **Factores que impiden una cotización exitosa por la plataforma**
 
-1. Solicitudes de productos que equieren de una cotización manual dado qe no se encuentran en la base de datos
+1. Solicitudes de productos que requieren de una cotización manual dado que no se encuentran en la base de datos
 
-
+**Ejemplo:**
 <img width="1157" height="185" alt="image" src="https://github.com/user-attachments/assets/e5034764-359c-48ea-b249-c4db1d8ed0b6" />
 <img width="1231" height="188" alt="image" src="https://github.com/user-attachments/assets/1ad9c543-5976-469a-b66c-b18b7d9c7148" />
 
