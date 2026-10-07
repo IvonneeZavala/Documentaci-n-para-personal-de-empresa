@@ -54,9 +54,11 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
 </p>
 <p align="justify">
 <ul style="text-align: justify;">
-  <li><b>Envío de Ticket de Compra:</b> Genera de manera inmediata el desglose detallado de costos por producto (costo de secuencia, purificación, modificaciones y asignación de ID único de operación).</li>
-  <li><b>Envío de Cotización Formal:</b> Adjunta el desglose económico en Excel, fechas sugeridas de pago y entrega, e instrucciones para la liquidación.</li>
-  <li><b>Detección de secuencias, Notificación Blast (Sector Salud / BLAST):</b> En caso de detectar coincidencias de alta similitud en la base de datos biológica, el sistema redirige la solicitud al área de Síntesis para una revisión manual y evaluación de viabilidad previa al procesamiento.</li>
+   
+<p align="justify">
+<li><b>Envío de Ticket de Compra:</b> Genera de manera inmediata el desglose detallado de costos por producto (costo de secuencia, purificación, modificaciones y asignación de ID único de operación).</li>
+<li><b>Envío de Cotización Formal:</b> Adjunta el desglose económico en Excel, fechas sugeridas de pago y entrega, e instrucciones para la liquidación.</li>
+<li><b>Detección de secuencias, Notificación Blast (Sector Salud / BLAST):</b> En caso de detectar coincidencias de alta similitud en la base de datos biológica, el sistema redirige la solicitud al área de Síntesis para una revisión manual y evaluación de viabilidad previa al procesamiento.</li>
 </ul>
 
 
@@ -69,13 +71,104 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
 ### Tiempo de prueba
    <p align="justify">
 
-Se realizaron dos revisiones de las cotizaciones en tiempos diferentes, la primera prueba fue de manera automática en la cual la plataforma de cotización recibía los formatos de llenado uno tras otro y se generaban los correos electrónicos con la respuesta de su cotización, esto para obtener una revisión previa de manera automatiada y rapida.
+Se realizaron dos revisiones de las cotizaciones en tiempos diferentes, una de manera automatizada y otra de manera manual cada una con objetivos diferentes.
+
+* #### Cotización automatizada
+
 <p align="justify">
-La segunda prueba se realizo de manera manual, esto para generar un registro mas especifico de los resultados, se hizo una prueba general con 411 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones, se cargo en la plataforma de uno por uno de los formatos y se realizo un registro en cuales se llevo a cabo la cotización de manera correcta y en cuales arrojo error, se reviso cada formato y verifico si fue por formato anterior o formato actualizado, también se registro los errores mas presentes por parte del usuario en el llenado del formato anterior y como se releja la solución en el nuevo formato cotizador.
+El objetivo de esta primera prueba fue para comprobar si la plataforma cumplía su función, verificar que los archivos pudieran ser procesados correctamente, que la información válida pudiera utilizarse para generar una cotización y detectar los principales errores que podían presentarse durante el proceso y como podia mejorarse, saber cuales son las metricas en tiempos de cotización y obtener un recuento de ls cotizaciones exitosas y erroneas.
+
+   **Desarrollo de la prueba**
+   
+<p align="justify">
+La prueba se realizó mediante un flujo dividido en dos etapas principales:
+
+**1.  Revisión de los formatos**
+
+<p align="justify">
+En esta etapa se procesaron los archivos de Excel del formato de llenado para comprobar que contaran con la información y estructura necesarias para que la plataforma pudiera continuar con la cotización.
+
+Los archivos que cumplían con las condiciones requeridas continuaban al siguiente proceso, mientras que aquellos que presentaban alguna anomalia eran registrados como fallidos junto con la información disponible sobre el problema.
+
+**2.  Generación de la cotización**
+
+<p align="justify">
+Los formatos que superaban la etapa de revisión pasaban al proceso de cálculo de la cotización. En esta etapa se procesaba la información del formato para generar el precio correspondiente.
+   
+<p align="justify">
+Cada intento era registrado como completado o fallido. En los casos exitosos se registraba también el tiempo empleado para realizar el cálculo.
+
+
+* #### Cotiación manual
+  
+<p align="justify">
+Esta segunda prueba se realizo de manera manual con el objetivo de recaudar mayor información sobre el uso correcto e incorrecto del formato de llenado por parte del usuario y el uso del nuevo formato cotizador y su respuesta, esto para generar un registro mas especifico de los resultados.
+
+**Desarrollo de la prueba**
+
+<p align="justify">
+Se realizo una prueba general con un total de 411 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones 
+   
+<p align="justify">
+Se cargo en la plataforma de uno por uno de los formatos y se realizo un registro en cuales se llevo a cabo la cotización de manera correcta y en cuales arrojo error segun los resultados obtenidos en por correo electronico, se reviso cada formato que sealo como cotizacion errones no concluida y se verifico si el formato cotizado correspondia al formato anterior o formato actualizado, también se registro los errores mas rrecurrentes por parte del usuario en el llenado del formato anterior.
 
 ---
 
 **Resultados**
+
+* #### Cotización automatizada
+  
+De acuerdo con los registros de la prueba, se obtuvieron los siguientes resultados:
+
+<img width="670" height="304" alt="image" src="https://github.com/user-attachments/assets/d3842552-8c7c-4822-9d44-0cb11607a273" />
+
+
+<p align="justify">
+En la etapa de revisión se registraron 2,570 procesamientos completados correctamente y 90 con algún tipo de fallo. Posteriormente, durante la generación de cotizaciones, se registraron 1,385 procesos completados y 786 fallos.
+
+**Principales errores encontrados**
+
+<p align="justify">
+Durante la revisión de los formatos se identificaron 90 registros de fallo. Los problemas encontrados con mayor frecuencia fueron:
+
+* Producto no localizado o nombre diferente al registrado en la base de datos: 37 casos.
+
+* Información o estructura del archivo de Excel fuera de lo esperado: 32 casos.
+
+* Campo o valor sin completar: 4 casos.
+
+* Archivo que no correspondía a un formato de Excel: 4 casos.
+
+* Formato incompleto: 1 caso.
+
+* Problema interno al preparar una carpeta de trabajo: 12 casos.
+  
+<p align="justify">
+Estos resultados permitieron identificar principalmente problemas relacionados con la información proporcionada en los formatos y con la estructura esperada por el sistema. También se identificaron algunos problemas internos del proceso que no necesariamente corresponden a errores del usuario.
+
+**Tiempo de generación de las cotizaciones**
+
+<p align="justify">
+Para los 1,385 procesos de cotización que concluyeron correctamente, se registraron diferentes tiempos de ejecución:
+
+* Mediana: 28 segundos.
+
+* Promedio: 85.4 segundos.
+
+* Tiempo mínimo: 3 segundos.
+
+* Tiempo máximo: 14 horas, 29 minutos y 2 segundos.
+  
+<p align="justify">
+La mediana de 28 segundos representa una referencia más cercana al tiempo de ejecución de un caso típico, mientras que el promedio se incrementó debido a algunos procesos que requirieron un tiempo considerablemente mayor. El caso de mayor duración se considera un comportamiento fuera de lo común ajeno al desempeño de la plataforma que podría requerir una revisión adicional.
+   
+<p align="justify">
+Esta prueba automatizada permitió comprobar el funcionamiento del flujo de procesamiento de los formatos y de generación de cotizaciones, así como identificar los principales problemas que pueden impedir que una solicitud avance correctamente.
+   
+<p align="justify">
+Los resultados muestran que la plataforma es capaz de procesar los formatos y generar cotizaciones en una parte importante de los casos evaluados. Asimismo, las pruebas permitieron detectar errores frecuentes relacionados principalmente con productos no identificados, información incompleta y formatos cuya estructura no corresponde con la esperada por el sistema.
+
+* #### Cotización manual
 
 Las variaciones posibles:
 <table>
@@ -139,9 +232,29 @@ Ejemplos de los errores mas rrecurrentes:
 <img width="1157" height="185" alt="image" src="https://github.com/user-attachments/assets/e5034764-359c-48ea-b249-c4db1d8ed0b6" />
 <img width="1231" height="188" alt="image" src="https://github.com/user-attachments/assets/1ad9c543-5976-469a-b66c-b18b7d9c7148" />
 
-2. Ingreso incompleto y caracteres no validos
+Debido a que el cotizador automatizado funciona con productos previamente registrados en su base de datos, cuando el usuario solicita un producto que no se encuentra disponible en dicha base, el sistema no puede identificarlo y, por lo tanto, no puede generar automáticamente su cotización.
+En estos casos, la solicitud debe ser atendida mediante una cotización manual, especialmente cuando se trata de productos especiales o que requieren una configuración que no se encuentra contemplada en el cotizador.
+Ejemplos
+En el formato mostrado en la figura 1 se solicitaron los siguientes productos:
+- GIGAscript™ RT
+- NextPure ViroBac
+Estos productos no se encuentran disponibles dentro de la base de datos utilizada por el cotizador, por lo que la plataforma no puede asociarlos con un producto registrado ni determinar automáticamente su precio.
+
+**¿Cómo debe realizarse?**
+
+Cuando se requiera un producto que no se encuentra en la base de datos:
+1. No se debe intentar sustituir el producto por otro diferente.
+2. Se debe conservar la información del producto solicitado.
+3. La solicitud debe canalizarse para realizar una cotización manual.
+4. Si se trata de un producto especial o una síntesis/configuración particular, debe solicitarse la revisión correspondiente.
+
+2. Ingreso incorrecto y caracteres no validos
 
 <img width="915" height="336" alt="image" src="https://github.com/user-attachments/assets/ef60b13f-c9d5-40a7-983c-461d649b02d0" />
+
+
+
+
 
 ---
 
