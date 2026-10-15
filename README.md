@@ -7,8 +7,11 @@ Una introducción a la plataforma coT4, qué es, su creación y funcionamiento.
    Cotizador en línea comercial diseñado para optimizar el proceso de venta y atención al cliente, una cotización inmediata que transforma rápidamente la solicitud del cliente en un ticket de compra a través de su correo electrónico.
 </p>
 
+Puede ingresar a la plataforma a través del siguiente link: https://docker.t4oligo.com/#:~:text=Acciones%20Principales%20Enviar%20Cotizaci%C3%B3n%20Limpiar%20Formulario
+
+
 <p align="justify">
-La plataforma permite optimizar el flujo de información entre el cliente y las áreas involucradas en el proceso de cotización, reduciendo errores en la captura de datos, agilizando la revisión de las solicitudes y facilitando el seguimiento de cada requerimiento hasta la generación y envío de la cotización correspondiente.
+Esta plataforma permite optimizar el flujo de información entre el cliente y las áreas involucradas en el proceso de cotización, reduciendo errores en la captura de datos, agilizando la revisión de las solicitudes y facilitando el seguimiento de cada requerimiento hasta la generación y envío de la cotización correspondiente.
 </p>
 
 <p align="justify">
