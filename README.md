@@ -64,11 +64,59 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
 <li><b>Detección de secuencias, Notificación Blast (Sector Salud / BLAST):</b> En caso de detectar coincidencias de alta similitud en la base de datos biológica, el sistema redirige la solicitud al área de Síntesis para una revisión manual y evaluación de viabilidad previa al procesamiento.</li>
 </ul>
 
-
+---
 
 ### ¿Cómo lo hace?
 <p align="justify">
-   
+
+## ¿Cómo lo hace?
+
+<p align="justify">
+La plataforma COT4 procesa automáticamente el archivo de Excel proporcionado por el usuario para organizar, estandarizar y preparar la información de los productos solicitados para su cotización. Este proceso permite identificar los productos, unificar sus características y reconocer las modificaciones indicadas en cada registro.
+
+El procesamiento se realiza mediante las siguientes etapas:
+
+### 1. Lectura del formato cotizador
+
+La plataforma abre el archivo de Excel y extrae las filas que contienen información de los productos solicitados. Identifica los campos correspondientes al tipo de producto, cantidad, nombre, secuencia, escala, purificación, número de bases y modificaciones en los extremos 5′ y 3′.
+
+### 2. Identificación del tipo de producto
+
+Con base en la información proporcionada, el sistema clasifica los registros en categorías como oligo estándar, oligo modificado o sonda. También reconoce determinadas categorías especiales, como RNA, T4BRICK™ y T4GENE™, así como algunos tipos de sondas con modificaciones específicas.
+
+### 3. Normalización de la información
+
+El sistema estandariza los datos para mantener un formato uniforme. Entre las acciones realizadas se encuentran:
+
+- Convertir las secuencias a letras mayúsculas.
+- Eliminar espacios innecesarios en los nombres y las secuencias.
+- Sustituir los espacios de los nombres por guiones bajos.
+- Unificar los nombres de los productos y las categorías correspondientes.
+- Estandarizar la escritura de las escalas y los tipos de purificación.
+
+### 4. Asignación de valores predeterminados
+
+Cuando algunos campos de escala o purificación se encuentran vacíos, el sistema puede asignar valores predeterminados de acuerdo con la categoría del producto.
+
+Por ejemplo, para los oligos estándar y modificados puede asignar una escala de 50 nmol y purificación por desalado. Para determinadas sondas puede establecer una escala de 200 nmol y purificación HPLC. En algunos productos especiales, los campos que no aplican se completan con el valor «No».
+
+### 5. Reconocimiento de modificaciones
+
+El sistema revisa las modificaciones indicadas en la secuencia y en sus extremos 5′ y 3′. Para ello, compara las etiquetas ingresadas con un catálogo de modificaciones previamente configurado.
+
+Cuando identifica una modificación interna reconocida, puede registrarla en el campo correspondiente. Si no encuentra una coincidencia suficiente, el sistema puede marcarla como «No reconocido», lo que permite identificar información que requiere revisión.
+
+### 6. Preparación de la secuencia final
+
+Una vez procesados los datos, el sistema prepara la secuencia incorporando las modificaciones de los extremos 5′ y 3′ cuando corresponda. De esta manera, la información queda organizada para representar las características del producto solicitado.
+
+### 7. Organización y generación del resultado
+
+Finalmente, el sistema organiza los campos procesados y genera un archivo en formato JSON que contiene la información estructurada de los productos. Este archivo se guarda en la ubicación configurada para los resultados y sirve como salida del proceso automatizado.
+
+### Consideraciones importantes
+
+El procesamiento automático facilita la organización y estandarización de la información, pero no garantiza por sí solo que todos los productos y sus combinaciones sean comercialmente válidos. Los registros con productos especiales, modificaciones no reconocidas o información incompleta pueden requerir una revisión adicional antes de elaborar la cotización definitiva.
    ---
    
 ### Tiempo de prueba
