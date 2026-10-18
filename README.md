@@ -9,6 +9,27 @@ Una introducción a la plataforma coT4, qué es, su creación y funcionamiento.
 
 Puede ingresar a la plataforma a través del siguiente link: https://docker.t4oligo.com/#:~:text=Acciones%20Principales%20Enviar%20Cotizaci%C3%B3n%20Limpiar%20Formulario
 
+<p align="justify">
+Para llevar a cabo su cotizacion debera ingresar y como primer paso se deberá descargar la plantilla del formato cotizador en el botón **“Descargar plantilla”** y se abrirá el excel, el cual contiene diferentes apartados los cuales se deben llenar de manera completa y correcta, se observarán los apartados de **“Datos de envío”**, **“Datos de facturación”** y seguido del apartado general para la solicitud del producto con sus especificaciones.
+Al completar todas las casillas deberá guardarse el Excel y cargarlo a la página en el botón **“Cargar desde Ecxel”** y seguido del botón **“Enviar cotización”**.
+
+Al oprimir el botón **“Enviar cotizzación”**, la interfaz deberá realizar las siguientes acciones:
+1. Cambiar la velocidad de la animación de las letras **“A”**, **“T”**, **“C”** y **“G”**, aumentando su velocidad para indicar que el proceso se encuentra en ejecución.
+2. Actualizar el estado del proceso. La leyenda ubicada en la parte inferior, que inicialmente muestra **“READY”**, deberá cambiar a **“Processing”** mientras se procesa la solicitud.
+3. Mostrar el resultado del proceso en la parte superior derecha de la interfaz
+
+ * Si el archivo se carga correctamente, deberá aparecer un mensaje indicando: **“Archivo [Nombre del archivo] cargado correctamente”**.
+ * Si ocurre un error durante la carga o el procesamiento, deberá mostrarse una pestaña en la parte superior derecha con una descripción del error y, cuando corresponda, el nombre del error.
+
+Una vez finalizado el proceso, la interfaz deberá regresar a su estado inicial y la animación deberá volver a su velocidad lenta. 
+
+Tras haber completado y enviado el formulario correctamente, el usuario recibirá una respuesta en su correo electrónico. Dependiendo del estado de su solicitud, puede recibir uno de los siguientes 3 tipos de notificación: 
+
+1. Recepción de ticket de compra:
+2. Recepción de la Cotización
+3. Detección de secuencias (Sector Salud)
+
+---
 
 <p align="justify">
 Esta plataforma permite optimizar el flujo de información entre el cliente y las áreas involucradas en el proceso de cotización, reduciendo errores en la captura de datos, agilizando la revisión de las solicitudes y facilitando el seguimiento de cada requerimiento hasta la generación y envío de la cotización correspondiente.
@@ -69,9 +90,6 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
 ### ¿Cómo lo hace?
 <p align="justify">
 
-## ¿Cómo lo hace?
-
-<p align="justify">
 La plataforma COT4 procesa automáticamente el archivo de Excel proporcionado por el usuario para organizar, estandarizar y preparar la información de los productos solicitados para su cotización. Este proceso permite identificar los productos, unificar sus características y reconocer las modificaciones indicadas en cada registro.
 
 El procesamiento se realiza mediante las siguientes etapas:
