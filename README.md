@@ -341,7 +341,7 @@ Como se puede observar en la figura 3, en las columnas correspondientes a las mo
 
 ---
 
-### Solución de problemas
+### Solución de problemas, mejoras implementadas en el nuevo formato cotizador
 
 <p align="justify">
 Los situaciones mas frecuentes ya identificados por los cuales no es posible cerrar la cotización con éxito corresponden al formato cotizador anterior, las modificaciones realizadas en el formato actualizado  se diseñaron de manera que estos errores por parte del usuario ya no fueran posibles con la implementación de campos de llenado de caracter obligatorio, listas despegables y seguros.
