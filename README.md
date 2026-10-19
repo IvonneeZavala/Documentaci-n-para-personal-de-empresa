@@ -570,7 +570,7 @@ Estas mejoras reducen la libertad de modificar manualmente los campos que deben 
 
 ---
 
-### Pruebas y evaluación del formato cotiador
+### Pruebas y evaluación del formato cotizador
 
 <p align="justify">
 Se realizaron dos revisiones de las cotizaciones en tiempos diferentes, una de manera automatizada y otra de manera manual cada una con objetivos diferentes.
@@ -608,7 +608,7 @@ Los formatos que superaban la etapa de revisión pasaban al proceso de cálculo 
 Cada intento era registrado como completado o fallido. En los casos exitosos se registraba también el tiempo empleado para realizar el cálculo.
 </p>
 
-* ### Cotiación manual
+* ### Cotización manual
 
 <p align="justify">
 Esta segunda prueba se realizo de manera manual con el objetivo de recaudar mayor información sobre el uso correcto e incorrecto del formato de llenado por parte del usuario y el uso del nuevo formato cotizador y su respuesta, esto para generar un registro mas especifico de los resultados.
@@ -783,7 +783,6 @@ Figura 3.
 En este caso, la cotización no se realizó de manera exitosa debido a que el archivo de entrada no conservó la estructura y el formato establecido para el registro de modificaciones. Como se puede observar en la figura 3, en las columnas correspondientes a las modificaciones 5' y 3' fueron combinadas en una sola celda, eliminando la separación requerida entre ambos extremos de la secuencia. Esta estructura es necesaria para que la plataforma pueda interpretar de manera independiente la modificación correspondiente a cada extremo del oligo.
 </p>
 
-<img width="915" height="336" alt="image" src="https://github.com/user-attachments/assets/ef60b13f-c9d5-40a7-983c-461d649b02d0" />
 
 ---
 
