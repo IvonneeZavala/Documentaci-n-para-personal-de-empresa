@@ -11,6 +11,7 @@ Puede ingresar a la plataforma a través del siguiente link: https://docker.t4ol
 
 <p align="justify">
 Para llevar a cabo su cotización, deberá ingresar y, como primer paso, se deberá descargar la plantilla del formato cotizador en el botón <strong>“Descargar plantilla”</strong> y se abrirá el Excel, el cual contiene diferentes apartados que se deben llenar de manera completa y correcta. Se observarán los apartados de <strong>“Datos de envío”</strong>, <strong>“Datos de facturación”</strong> y, seguido de estos, el apartado general para la solicitud del producto con sus especificaciones.
+Para realizar un correcto llenado de este formato se recomienda leer previamente la <strong>"Guía de llenado del formato cotizador"</strong> que se le será disponible.
 </p>
 
 <p align="justify">
