@@ -93,7 +93,7 @@ El proceso inicia cuando el cliente descarga la plantilla del formato cotizador 
 **2. Procesamiento de la Interfaz y Validación**
 
 <p align="justify">
-Al enviar el formulario, el sistema ajusta dinámicamente el estado del proceso a ejecución ("Processing") y valida la información y datos ingresados. La plataforma interpreta los parámetros del producto (tipo de síntesis, cantidad, escala, purificación, longitud y modificaciones 5' y 3') para realizar el cálculo automático de precios de acuerdo a la base de datos, o bien asigna una atención manual para productos especiales (como T4BRICK™ o T4GENE™ RNA).
+Al enviar el formulario, el sistema ajusta dinámicamente el estado del proceso a ejecución ("Processing") y valida la información y datos ingresados. La plataforma interpreta los parámetros del producto (tipo de síntesis, cantidad, escala, purificación, longitud y modificaciones 5' y 3') para realizar el cálculo automático de precios de acuerdo a la base de datos.
 </p>
 
 **3. Análisis Bioinformático de Seguridad (Integración con BLAST)**
@@ -124,15 +124,15 @@ La plataforma COT4 procesa automáticamente el archivo de Excel proporcionado po
 
 El procesamiento se realiza mediante las siguientes etapas:
 
-### 1. Lectura del formato cotizador
+**1. Lectura del formato cotizador**
 
 La plataforma abre el archivo de Excel y extrae las filas que contienen información de los productos solicitados. Identifica los campos correspondientes al tipo de producto, cantidad, nombre, secuencia, escala, purificación, número de bases y modificaciones en los extremos 5′ y 3′.
 
-### 2. Identificación del tipo de producto
+**2. Identificación del tipo de producto**
 
 Con base en la información proporcionada, el sistema clasifica los registros en categorías como oligo estándar, oligo modificado o sonda. También reconoce determinadas categorías especiales, como RNA, T4BRICK™ y T4GENE™, así como algunos tipos de sondas con modificaciones específicas.
 
-### 3. Normalización de la información
+**3. Normalización de la información**
 
 El sistema estandariza los datos para mantener un formato uniforme. Entre las acciones realizadas se encuentran:
 
@@ -142,29 +142,26 @@ El sistema estandariza los datos para mantener un formato uniforme. Entre las ac
 - Unificar los nombres de los productos y las categorías correspondientes.
 - Estandarizar la escritura de las escalas y los tipos de purificación.
 
-### 4. Asignación de valores predeterminados
+**4. Asignación de valores predeterminados**
 
 Cuando algunos campos de escala o purificación se encuentran vacíos, el sistema puede asignar valores predeterminados de acuerdo con la categoría del producto.
 
 Por ejemplo, para los oligos estándar y modificados puede asignar una escala de 50 nmol y purificación por desalado. Para determinadas sondas puede establecer una escala de 200 nmol y purificación HPLC. En algunos productos especiales, los campos que no aplican se completan con el valor «No».
 
-### 5. Reconocimiento de modificaciones
+**5. Reconocimiento de modificaciones**
 
 El sistema revisa las modificaciones indicadas en la secuencia y en sus extremos 5′ y 3′. Para ello, compara las etiquetas ingresadas con un catálogo de modificaciones previamente configurado.
 
 Cuando identifica una modificación interna reconocida, puede registrarla en el campo correspondiente. Si no encuentra una coincidencia suficiente, el sistema puede marcarla como «No reconocido», lo que permite identificar información que requiere revisión.
 
-### 6. Preparación de la secuencia final
+**6. Preparación de la secuencia final**
 
 Una vez procesados los datos, el sistema prepara la secuencia incorporando las modificaciones de los extremos 5′ y 3′ cuando corresponda. De esta manera, la información queda organizada para representar las características del producto solicitado.
 
-### 7. Organización y generación del resultado
+**7. Organización y generación del resultado**
 
 Finalmente, el sistema organiza los campos procesados y genera un archivo interno de los productos; este archivo almacena los resultados y los registra en la base de datos interna.
 
-### Consideraciones importantes
-
-El procesamiento automático facilita la organización y estandarización de la información, pero no garantiza por sí solo que todos los productos y sus combinaciones sean comercialmente válidos. Los registros con productos especiales, modificaciones no reconocidas o información incompleta pueden requerir una revisión adicional antes de elaborar la cotización definitiva.
 
 ---
 
@@ -196,7 +193,7 @@ Se realizaron dos revisiones de las cotizaciones en tiempos diferentes, una de m
 * ### Cotización automatizada
 
 <p align="justify">
-El objetivo de esta primera prueba fue para comprobar si la plataforma cumplía su función, verificar que los archivos pudieran ser procesados correctamente, que la información válida pudiera utilizarse para generar una cotización y detectar los principales errores que podían presentarse durante el proceso y como podía mejorarse, saber cuales son las métricas en tiempos de cotización y obtener un recuento de ls cotizaciones exitosas y erróneas.
+El objetivo de esta primera prueba fue para comprobar si la plataforma cumplía su función, verificar que los archivos pudieran ser procesados correctamente, que la información válida pudiera utilizarse para generar una cotización y detectar los principales errores que podían presentarse durante el proceso y como podía mejorarse, saber cuales son las métricas en tiempos de cotización y obtener un recuento de las cotizaciones exitosas y erróneas.
 </p>
 
 -- **Desarrollo de la prueba** --
@@ -234,11 +231,11 @@ Esta segunda prueba se realizo de manera manual con el objetivo de recaudar mayo
 -- **Desarrollo de la prueba** --
 
 <p align="justify">
-Se realizo una prueba general con un total de 411 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones
+Se realizo una prueba general con un total de 411 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre de 2026, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones.
 </p>
 
 <p align="justify">
-Se cargo en la plataforma de uno por uno de los formatos y se realizo un registro en cuales se llevo a cabo la cotización de manera correcta y en cuales arrojo error segun los resultados obtenidos en por correo electronico, se reviso cada formato que sealo como cotizacion errones no concluida y se verifico si el formato cotizado correspondia al formato anterior o formato actualizado, también se registro los errores mas rrecurrentes por parte del usuario en el llenado del formato anterior.
+Se cargo en la plataforma de uno por uno de los formatos y se realizo un registro en cuales se llevo a cabo la cotización de manera correcta y en cuales arrojo error según los resultados obtenidos en por correo electrónico, se reviso cada formato que señalo como cotización errónea o no concluida y se verifico si el formato cotizado correspondía al formato anterior o formato actualizado, también se registro los errores mas recurrentes por parte del usuario en el llenado del formato anterior.
 </p>
 
 ---
