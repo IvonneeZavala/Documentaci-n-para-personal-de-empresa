@@ -13,17 +13,21 @@ Puede ingresar a la plataforma a través del siguiente link: https://docker.t4ol
 Para llevar a cabo su cotización, deberá ingresar y, como primer paso, se deberá descargar la plantilla del formato cotizador en el botón <strong>“Descargar plantilla”</strong> y se abrirá el Excel, el cual contiene diferentes apartados que se deben llenar de manera completa y correcta. Se observarán los apartados de <strong>“Datos de envío”</strong>, <strong>“Datos de facturación”</strong> y, seguido de estos, el apartado general para la solicitud del producto con sus especificaciones.
 Para realizar un correcto llenado de este formato se recomienda leer previamente la <strong>"Guía de llenado del formato cotizador"</strong> que se le será disponible.
 </p>
+<p align="center">
+  <img width="1364" height="655" alt="image" src="https://github.com/user-attachments/assets/3960cd46-1c4b-4145-9d6b-7355545f3fde" />
+</p>
 
 <p align="justify">
-Al completar todas las casillas, deberá guardarse el Excel y cargarse a la página mediante el botón <strong>“Cargar desde Excel”</strong>, seguido del botón <strong>“Enviar cotización”</strong>.
+Al completar todas las casillas de su formato cotizador, deberá guardarse el Excel y cargarse a la página mediante el botón <strong>“Cargar desde Excel”</strong>, seguido del botón <strong>“Enviar cotización”</strong>.
 </p>
 
 Al oprimir el botón **“Enviar cotización”**, la interfaz deberá realizar las siguientes acciones:
 1. Cambiar la velocidad de la animación de las letras **“A”**, **“T”**, **“C”** y **“G”**, aumentando su velocidad para indicar que el proceso se encuentra en ejecución.
 2. Actualizar el estado del proceso. La leyenda ubicada en la parte inferior, que inicialmente muestra **“READY”**, deberá cambiar a **“Processing”** mientras se procesa la solicitud.
+<img width="1364" height="655" alt="image" src="https://github.com/user-attachments/assets/7e26eb9b-66d8-40dd-8a54-8a1299fb5639" />
 3. Mostrar el resultado del proceso en la parte superior derecha de la interfaz
 
- * Si el archivo se carga correctamente, deberá aparecer un mensaje indicando: **“Archivo [Nombre del archivo] cargado correctamente”**.
+ * Si el archivo se carga correctamente, deberá aparecer un mensaje indicando: **“Archivo [Nombre del archivo] cargado correctamente”**.<img width="1364" height="655" alt="image" src="https://github.com/user-attachments/assets/d076bcba-7455-4060-beea-a0cc64b589e5" />
  * Si ocurre un error durante la carga o el procesamiento, deberá mostrarse una pestaña en la parte superior derecha con una descripción del error y, cuando corresponda, el nombre del error.
 
 Una vez finalizado el proceso, la interfaz deberá regresar a su estado inicial y la animación deberá volver a su velocidad lenta. 
