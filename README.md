@@ -246,9 +246,9 @@ Se cargo en la plataforma de uno por uno de los formatos y se realizo un registr
 
 De acuerdo con los registros de la prueba, se obtuvieron los siguientes resultados:
 
-<img width="670" height="304" alt="image" src="https://github.com/user-attachments/assets/d3842552-8c7c-4822-9d44-0cb11607a273" />
+<img width="670" height="304" alt="image" src="https://github.com/user-attachments/assets/277d0439-b046-4da8-9a96-9a2e2cbc97ab" />
 
-Gráfico 1. Resultados de intentos registrados por etapa.
+**Gráfico 1. Resultados de intentos registrados por etapa.**
 
 <p align="justify">
 En la etapa de revisión se registraron 2,570 procesamientos completados correctamente y 90 con algún tipo de fallo. Posteriormente, durante la generación de cotizaciones, se registraron 1,385 procesos completados y 786 fallos.
@@ -296,7 +296,7 @@ Los resultados muestran que la plataforma es capaz de procesar los formatos y ge
 
 * ### Cotización manual
 
-De acuerdo con el registro que se realizo de manera manual, se obtuvieron los siguientes resultados:
+De acuerdo con el registro que se realizó de manera manual, se obtuvieron los siguientes resultados:
 
 Variaciones posibles:
 
@@ -324,10 +324,11 @@ Variaciones posibles:
 
 <img width="518" height="320" alt="Recuento de cotizaciones" src="https://github.com/user-attachments/assets/c8090ea2-aed7-4721-88f4-79d706ede965" />
 
-Gráfico 2. Recuento de cotizaciones.
+
+**Gráfico 2. Recuento de cotizaciones.**
 
 <p align="justify">
-De un total de 411 cotizaciones el 80.9% fueron correctas y cotizadas con éxito, las cuales corresponden a cotizaciones realizadas con el nuevo formato actualizado, el 19.1% restante fueron cotizaciones erróneas que fueron hechas con el formato antiguo.
+De un total de 411 cotizaciones el 80.9% fueron correctas y cotizadas con éxito, las cuales corresponden a cotizaciones realizadas con el nuevo formato actualizado, el 19.1% restante fueron cotizaciones erróneas que fueron hechas con el formato anterior.
 </p>
 
 <p align="justify">
@@ -341,7 +342,7 @@ Ejemplos:
 
 <img width="600" height="371" alt="Uso incorrecto del formato " src="https://github.com/user-attachments/assets/cde79fbb-21d1-4c77-8771-dcc0733c2bb1" />
 
-Gráfico 3. Uso incorrecto del formato.
+**Gráfico 3. Uso incorrecto del formato.**
 
 El 8.5% del total de las cotizaciones presentan un error debido a alguna anomalía ajena al formato cotizador debido al uso incorrecto.
 
@@ -359,14 +360,15 @@ El resto de las cotizaciones erróneas o no concluidas corresponden al uso del f
 
 * **Factores que impiden una cotización exitosa por la plataforma**
 
-1. Solicitudes de productos que requieren de una cotización manual dado que no se encuentran en la base de datos de la plataforma.
+
+**1. Solicitudes de productos que requieren de una cotización manual dado que no se encuentran en la base de datos de la plataforma.**
 
 **Ejemplo:**
 
-Figura 1.
+**Figura 1.**
 <img width="1445" height="232" alt="imagen" src="https://github.com/user-attachments/assets/e552f215-04a0-42bf-bc4b-4d41cc92493d" />
 
-Figura 2.
+**Figura 2.**
 <img width="1535" height="230" alt="imagen" src="https://github.com/user-attachments/assets/85c83225-940e-4a28-8aea-0e8d42b28057" />
 
 <p align="justify">
@@ -388,14 +390,19 @@ En el formato mostrado en la figura 1 y figura 2 se solicitaron los siguientes p
 Estos productos no se encuentran disponibles dentro de la base de datos utilizada por el cotizador, por lo que la plataforma no puede asociarlos con un producto registrado ni determinar automáticamente su precio.
 </p>
 
-2. Ingreso incorrecto y caracteres no validos
+**2. Ingreso incorrecto y caracteres no validos**
 
-Figura 3.
+**Figura 3.**
 <img width="1374" height="241" alt="imagen" src="https://github.com/user-attachments/assets/09bcd7a8-47c0-4c9e-8f83-7a18a86d0523" />
+
 
 <p align="justify">
 En este caso, la cotización no se realizó de manera exitosa debido a que el archivo de entrada no conservó la estructura y el formato establecido para el registro de modificaciones. Como se puede observar en la figura 3, en las columnas correspondientes a las modificaciones 5' y 3' fueron combinadas en una sola celda, eliminando la separación requerida entre ambos extremos de la secuencia. Esta estructura es necesaria para que la plataforma pueda interpretar de manera independiente la modificación correspondiente a cada extremo del oligo.
 </p>
+
+**Figura 4.**
+
+<img width="915" height="336" alt="image" src="https://github.com/user-attachments/assets/ef60b13f-c9d5-40a7-983c-461d649b02d0" />
 
 
 ---
@@ -406,7 +413,7 @@ En este caso, la cotización no se realizó de manera exitosa debido a que el ar
 Los situaciones mas frecuentes ya identificados por los cuales no es posible cerrar la cotización con éxito corresponden al formato cotizador anterior, las modificaciones realizadas en el formato actualizado se diseñaron de manera que estos errores por parte del usuario ya no fueran posibles con la implementación de campos de llenado de caracter obligatorio, listas despegables y seguros.
 </p>
 
-Figura 4.
+**Figura 4. Formato cotizador actualizado.**
 
 <p align="center">
   <img width="1107" height="472" alt="image" src="https://github.com/user-attachments/assets/9f1200d8-7a70-4a5b-b367-47c504f2cc17" />
@@ -417,11 +424,26 @@ El nuevo formato al contar con las listas despegables no permitirá el ingreso d
 </p>
 
 <p align="justify">
-En el caso de ingreso de caracteres no válidos también se ve restringido por el nuevo formato cotizador, ya que contiene seguros y solo se podrá ingresar de manera correcta.
+El uso exitoso del formato actualizado se puede reflejar en que del total de 411 cotizaciones, el 80.9% fueron correctas y cotizadas con éxito, las cuales corresponden a cotizaciones realizadas con el nuevo formato actualizado.
+</p>
+
+### Conclusiones y beneficios de las mejoras implementadas
+<p align="justify">
+A partir de las pruebas automatizadas, las pruebas manuales y el análisis de los errores identificados durante el uso de la plataforma coT4, se determinó que el formato cotizador actualizado es un elemento fundamental para el correcto procesamiento de las solicitudes y la generación de cotizaciones.
+</p>
+  
+<p align="justify">
+La comparación entre la versión anterior y la versión actualizada del formato permitió identificar áreas de oportunidad relacionadas con la captura de información, la selección de productos y el cumplimiento de la estructura requerida por la plataforma.
 </p>
 
 <p align="justify">
-El uso exitoso del formato actualizado se puede reflejar en que del total de 411 cotizaciones, el 80.9% fueron correctas y cotizadas con éxito, las cuales corresponden a cotizaciones realizadas con el nuevo formato actualizado. Todas las cotizaciones realizadas con el nuevo formato actualizado fueron correctas, a excepción de solo un formato, el cual fue modificado en su estructura.
+Como respuesta a estas áreas de oportunidad, se incorporaron listas desplegables, campos obligatorios y validaciones que orientan al usuario durante el llenado del formato y ayudan a prevenir errores de captura, modificaciones no permitidas y solicitudes con información incompleta. Estas mejoras buscan estandarizar la información recibida y facilitar su procesamiento automático.
 </p>
 
+<p align="justify">
+Asimismo, las pruebas realizadas permitieron identificar situaciones que requieren atención adicional, como las solicitudes de productos que no se encuentran registrados en la base de datos y los formatos cuya estructura ha sido modificada. En estos casos, es necesario revisar la información y, cuando corresponda, gestionar una cotización manual o solicitar al usuario que corrija el formato conforme a la guía establecida.
+</p>
 
+<p align="justify">
+Finalmente, se comprobó que la actualización del formato cotizador representa una mejora en el control y la estandarización de los datos de entrada, contribuyendo a reducir errores atribuibles al llenado incorrecto y a facilitar el proceso de generación de cotizaciones. 
+</p>
