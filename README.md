@@ -11,7 +11,7 @@ Puede ingresar a la plataforma a través del siguiente link: https://docker.t4ol
 
 <p align="justify">
 Para llevar a cabo su cotización, deberá ingresar y, como primer paso, se deberá descargar la plantilla del formato cotizador en el botón <strong>“Descargar plantilla”</strong> y se abrirá el Excel, el cual contiene diferentes apartados que se deben llenar de manera completa y correcta. Se observarán los apartados de <strong>“Datos de envío”</strong>, <strong>“Datos de facturación”</strong> y, seguido de estos, el apartado general para la solicitud del producto con sus especificaciones.
-Para realizar un correcto llenado de este formato se recomienda leer previamente la <strong>"Guía de llenado del formato cotizador"</strong> que se le será disponible.
+Para realizar un correcto llenado de este formato se recomienda leer previamente la <strong>"Guía de llenado del formato cotizador"</strong> que se le hará llegar.
 </p>
 <p align="center">
   <img width="1364" height="655" alt="image" src="https://github.com/user-attachments/assets/3960cd46-1c4b-4145-9d6b-7355545f3fde" />
@@ -33,13 +33,16 @@ Al oprimir el botón **“Enviar cotización”**, la interfaz deberá realizar 
 <img width="1364" height="655" alt="image" src="https://github.com/user-attachments/assets/d076bcba-7455-4060-beea-a0cc64b589e5" />
 
 
- * Si ocurre un error durante la carga o el procesamiento, deberá mostrarse una pestaña en la parte superior derecha con una descripción del error y, cuando corresponda, el nombre del error.
+ * Si ocurre un error durante la carga o el procesamiento, deberá mostrarse una pestaña en la parte superior derecha con una descripción del error y, cuando corresponda, el nombre del error como se muestra en la siguiente imagen:
+   
+<img width="1674" height="827" alt="imagen" src="https://github.com/user-attachments/assets/0fad858d-a1bb-48de-a649-794a058e931a" />
+
 
 Una vez finalizado el proceso, la interfaz deberá regresar a su estado inicial y la animación deberá volver a su velocidad lenta. 
 
 Tras haber completado y enviado el formulario correctamente, el usuario recibirá una respuesta en su correo electrónico. Dependiendo del estado de su solicitud, puede recibir uno de los siguientes 3 tipos de notificación: 
 
-1. Recepción de ticket de compra:
+1. Recepción de ticket de compra
 2. Recepción de la Cotización
 3. Detección de secuencias, Notificación Blast (Sector Salud / BLAST)
 
@@ -124,7 +127,7 @@ Una vez procesada la información, la plataforma gestiona el envío automático 
 ### ¿Cómo lo hace?
 
 <p align="justify">
-La plataforma COT4 procesa automáticamente el archivo de Excel proporcionado por el usuario para organizar, estandarizar y preparar la información de los productos solicitados para su cotización. Este proceso permite identificar los productos, unificar sus características y reconocer las modificaciones indicadas en cada registro.
+La plataforma coT4 procesa automáticamente el archivo de Excel proporcionado por el usuario para organizar, estandarizar y preparar la información de los productos solicitados para su cotización. Este proceso permite identificar los productos, unificar sus características y reconocer las modificaciones indicadas en cada registro.
 </p>
 
 El procesamiento se realiza mediante las siguientes etapas:
@@ -176,14 +179,14 @@ Cuando identifica una modificación interna reconocida, puede registrarla en el 
 **6. Preparación de la secuencia final**
 
 <p align="justify">
-Una vez procesados los datos, el sistema prepara la secuencia incorporando las modificaciones de los extremos 5′ y 3′ cuando corresponda. De esta manera, la información queda organizada para representar las características del producto solicitado.
+Una vez procesados los datos, el sistema prepara la secuencia final tomando como base la secuencia original proporcionada en el archivo de Excel. Cuando el producto incluye modificaciones en los extremos 5′ o 3′, estas se incorporan de acuerdo con las especificaciones registradas para cada extremo. De esta manera, se obtiene una representación de la secuencia que considera tanto las bases ingresadas como las modificaciones solicitadas.
 </p>
 
 **7. Organización y generación del resultado**
 
 <p align="justify">
-Finalmente, el sistema organiza los campos procesados y genera un archivo interno de los productos; este archivo almacena los resultados y los registra en la base de datos interna.
-</p>
+Finalmente, el procesamiento, el sistema reúne la información de cada producto en una estructura de datos organizada, que incluye los campos normalizados, la clasificación del producto, la cantidad solicitada, la secuencia final y las modificaciones identificadas, según corresponda. Posteriormente, genera un archivo interno con los registros procesados y almacena la información en la base de datos interna, lo que permite conservar los resultados para su consulta.
+</p> 
 
 ---
 
@@ -298,7 +301,7 @@ Durante la revisión de los formatos se identificaron 90 registros de fallo. Los
 - Problema interno al preparar una carpeta de trabajo: 12 casos.
 
 <p align="justify">
-Estos resultados permitieron identificar principalmente problemas relacionados con la información proporcionada en los formatos y con la estructura esperada por el sistema. También se identificaron algunos problemas internos del proceso que no necesariamente corresponden a errores del usuario.
+Estos resultados permitieron identificar principalmente problemas relacionados con la información proporcionada en los formatos y con la estructura esperada por el sistema. También se identificaron algunos problemas internos del proceso que no necesariamente corresponden a errores del usuario ni de la platafoema si no al ingreso de productos que no se encuentran en la base de datos dado que esta unicamente diseñado para la cotización de oligos y sondas.
 </p>
 
 **Tiempo de generación de las cotizaciones**
@@ -307,13 +310,18 @@ Estos resultados permitieron identificar principalmente problemas relacionados c
 Para los 1,385 procesos de cotización que concluyeron correctamente, se registraron diferentes tiempos de ejecución:
 </p>
 
-- Mediana: 28 segundos.
-- Promedio: 85.4 segundos.
-- Tiempo mínimo: 3 segundos.
-- Tiempo máximo: 14 horas, 29 minutos y 2 segundos.
+- Mediana: 28 segundos
+- Promedio: 48 segundos
+- Tiempo mínimo: 3 segundos
+- Tiempo máximo: 17 minutos y 14 segundos
 
 <p align="justify">
-La mediana de 28 segundos representa una referencia más cercana al tiempo de ejecución de un caso típico, mientras que el promedio se incrementó debido a algunos procesos que requirieron un tiempo considerablemente mayor. El caso de mayor duración se considera un comportamiento fuera de lo común ajeno al desempeño de la plataforma que podría requerir una revisión adicional.
+La mediana de 28 segundos representa una referencia más cercana al tiempo de ejecución de un caso típico, mientras que el promedio se incrementó debido a algunos procesos que requirieron un tiempo considerablemente mayor. 
+</p>
+
+<p align="justify">
+El caso de mayor duración real fue de 14 horas, 29 minutos y 2 segundos, sin embargo, no se tomo en cuenta ya que se considera un comportamiento fuera de lo común ajeno al desempeño de la plataforma que podría requerir una revisión adicional.
+El tiempo maximo tomado en cuenta para los calculos fue de 17 minutos y 14 segundos el cual tambien es un tiempo considerablemente alto a comparacion de los demas, este suceso es atribuible a la cotizacion con un numero mayor de secuencias de lo normal en las cuales su procesamiento y elaboración del blast de cada una de estas alargan el tiempo de espera para recibir la cotización, esta es la razon por la cual existe el alargamiento de tiempo en recibir las cotzaciones dependienso de la cantidad de secuencias a cotizar.
 </p>
 
 <p align="justify">
@@ -349,7 +357,8 @@ Variaciones posibles:
   </tr>
 </table>
 
-- Formato Anterior: No cuenta con las listas desplegables.
+- Formato anterior: No cuenta con las listas desplegables.
+- Formato diferente: Uso incorrecto del formato. Ej.: Solicitud de productos no dispoibles en el catálago como enzimas, kits u modificaciones en la estructura del formato cotizador.
 - Formato correcto: Cuenta los las listas desplegables y seguros para el correcto ingreso de información por el usuario.
 
 <img width="518" height="320" alt="Recuento de cotizaciones" src="https://github.com/user-attachments/assets/c8090ea2-aed7-4721-88f4-79d706ede965" />
@@ -366,11 +375,12 @@ También existen casos especiales en que la cotización no puede concluir de man
 </p>
 
 Ejemplos:
-- Solicitud de productos no específicos del catálogo que requieren una cotización manual, ya sea que no se encuentren en la base de datos de cualquiera de los dos formatos.
+- Solicitud de productos no específicos del catálogo que requieren una cotización manual. Ej: Enzimas, material, kits.
 - Modificaciones por el usuario del formato cotizador. Ej: Eliminar filas, agregar cuadros, etc.
 - Valores o caracteres no válidos por el formato anterior.
 
-<img width="600" height="371" alt="Uso incorrecto del formato " src="https://github.com/user-attachments/assets/cde79fbb-21d1-4c77-8771-dcc0733c2bb1" />
+<img width="672" height="414" alt="Uso incorrecto del formato (1)" src="https://github.com/user-attachments/assets/82a553b5-0a27-4564-a8d0-11cf56bc9472" />
+
 
 **Gráfico 3. Uso incorrecto del formato.**
 
