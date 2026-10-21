@@ -321,7 +321,7 @@ La mediana de 28 segundos representa una referencia más cercana al tiempo de ej
 
 <p align="justify">
 El caso de mayor duración real fue de 14 horas, 29 minutos y 2 segundos, sin embargo, no se tomo en cuenta ya que se considera un comportamiento fuera de lo común ajeno al desempeño de la plataforma que podría requerir una revisión adicional.
-El tiempo maximo tomado en cuenta para los calculos fue de 17 minutos y 14 segundos el cual tambien es un tiempo considerablemente alto a comparacion de los demas, este suceso es atribuible a la cotizacion con un numero mayor de secuencias de lo normal en las cuales su procesamiento y elaboración del blast de cada una de estas alargan el tiempo de espera para recibir la cotización, esta es la razon por la cual existe el alargamiento de tiempo en recibir las cotzaciones dependienso de la cantidad de secuencias a cotizar.
+El tiempo máximo tomado en cuenta para los cálculos fue de 17 minutos y 14 segundos el cual también es un tiempo considerablemente alto a comparación de los demás, este suceso es atribuible a la cotización con un numero mayor de secuencias de lo normal en las cuales su procesamiento y elaboración del blast de cada una de estas alargan el tiempo de espera para recibir la cotización, esta es la razón por la cual existe el alargamiento de tiempo en recibir las cotizaciones dependienso de la cantidad de secuencias a cotizar.
 </p>
 
 <p align="justify">
