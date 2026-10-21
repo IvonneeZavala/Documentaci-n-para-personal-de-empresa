@@ -22,12 +22,17 @@ Al completar todas las casillas de su formato cotizador, deberá guardarse el Ex
 </p>
 
 Al oprimir el botón **“Enviar cotización”**, la interfaz deberá realizar las siguientes acciones:
-1. Cambiar la velocidad de la animación de las letras **“A”**, **“T”**, **“C”** y **“G”**, aumentando su velocidad para indicar que el proceso se encuentra en ejecución.
-2. Actualizar el estado del proceso. La leyenda ubicada en la parte inferior, que inicialmente muestra **“READY”**, deberá cambiar a **“Processing”** mientras se procesa la solicitud.
+1. Cambio en la velocidad de la animación de las letras **“A”**, **“T”**, **“C”** y **“G”**, aumentando su velocidad para indicar que el proceso se encuentra en ejecución.
+2. Actualiación en el estado del proceso. La leyenda ubicada en la parte inferior, que inicialmente muestra **“READY”**, deberá cambiar a **“Processing”** mientras se procesa la solicitud.
 <img width="1364" height="655" alt="image" src="https://github.com/user-attachments/assets/7e26eb9b-66d8-40dd-8a54-8a1299fb5639" />
+
 3. Mostrar el resultado del proceso en la parte superior derecha de la interfaz
 
- * Si el archivo se carga correctamente, deberá aparecer un mensaje indicando: **“Archivo [Nombre del archivo] cargado correctamente”**.<img width="1364" height="655" alt="image" src="https://github.com/user-attachments/assets/d076bcba-7455-4060-beea-a0cc64b589e5" />
+ * Si el archivo se carga correctamente, deberá aparecer un mensaje en la esquina superior derecha indicando: **“Archivo [Nombre del archivo] cargado correctamente”**.
+
+<img width="1364" height="655" alt="image" src="https://github.com/user-attachments/assets/d076bcba-7455-4060-beea-a0cc64b589e5" />
+
+
  * Si ocurre un error durante la carga o el procesamiento, deberá mostrarse una pestaña en la parte superior derecha con una descripción del error y, cuando corresponda, el nombre del error.
 
 Una vez finalizado el proceso, la interfaz deberá regresar a su estado inicial y la animación deberá volver a su velocidad lenta. 
@@ -36,7 +41,7 @@ Tras haber completado y enviado el formulario correctamente, el usuario recibir�
 
 1. Recepción de ticket de compra:
 2. Recepción de la Cotización
-3. Detección de secuencias (Sector Salud)
+3. Detección de secuencias, Notificación Blast (Sector Salud / BLAST)
 
 ---
 
@@ -61,7 +66,7 @@ Para su correcto funcionamiento, es necesario que la información ingresada por 
 ### Versiones del formato cotizador: anterior y actualizado
 
 <p align="justify">
-Durante el uso de la plataforma coT4 se trabajó con dos versiones del formato cotizador: una versión anterior y una versión actualizada. Es importante distinguirlas porque los resultados de las pruebas muestran diferencias entre los formatos utilizados y su relación con el éxito o los errores de las cotizaciones.
+Durante el uso de la plataforma coT4 se trabajó con dos versiones del formato cotizador: una versión anterior y una versión actualizada. Es importante distinguirlas ya que los resultados de las pruebas sobre la evaluación de la plataforma muestran diferencias entre los formatos utilizados y su relación con el éxito o los errores de las cotizaciones.
 </p>
 
 <p align="justify">
@@ -126,14 +131,19 @@ El procesamiento se realiza mediante las siguientes etapas:
 
 **1. Lectura del formato cotizador**
 
+<p align="justify">
 La plataforma abre el archivo de Excel y extrae las filas que contienen información de los productos solicitados. Identifica los campos correspondientes al tipo de producto, cantidad, nombre, secuencia, escala, purificación, número de bases y modificaciones en los extremos 5′ y 3′.
-
+</p>
+  
 **2. Identificación del tipo de producto**
 
+<p align="justify">
 Con base en la información proporcionada, el sistema clasifica los registros en categorías como oligo estándar, oligo modificado o sonda. También reconoce determinadas categorías especiales, como RNA, T4BRICK™ y T4GENE™, así como algunos tipos de sondas con modificaciones específicas.
+</p>
 
 **3. Normalización de la información**
 
+<p align="justify">
 El sistema estandariza los datos para mantener un formato uniforme. Entre las acciones realizadas se encuentran:
 
 - Convertir las secuencias a letras mayúsculas.
@@ -141,27 +151,39 @@ El sistema estandariza los datos para mantener un formato uniforme. Entre las ac
 - Sustituir los espacios de los nombres por guiones bajos.
 - Unificar los nombres de los productos y las categorías correspondientes.
 - Estandarizar la escritura de las escalas y los tipos de purificación.
+</p>
 
 **4. Asignación de valores predeterminados**
 
+<p align="justify">
 Cuando algunos campos de escala o purificación se encuentran vacíos, el sistema puede asignar valores predeterminados de acuerdo con la categoría del producto.
+</p>
 
+<p align="justify">
 Por ejemplo, para los oligos estándar y modificados puede asignar una escala de 50 nmol y purificación por desalado. Para determinadas sondas puede establecer una escala de 200 nmol y purificación HPLC. En algunos productos especiales, los campos que no aplican se completan con el valor «No».
+</p>
 
 **5. Reconocimiento de modificaciones**
 
+<p align="justify">
 El sistema revisa las modificaciones indicadas en la secuencia y en sus extremos 5′ y 3′. Para ello, compara las etiquetas ingresadas con un catálogo de modificaciones previamente configurado.
+</p>
 
+<p align="justify">
 Cuando identifica una modificación interna reconocida, puede registrarla en el campo correspondiente. Si no encuentra una coincidencia suficiente, el sistema puede marcarla como «No reconocido», lo que permite identificar información que requiere revisión.
+</p>
 
 **6. Preparación de la secuencia final**
 
+<p align="justify">
 Una vez procesados los datos, el sistema prepara la secuencia incorporando las modificaciones de los extremos 5′ y 3′ cuando corresponda. De esta manera, la información queda organizada para representar las características del producto solicitado.
+</p>
 
 **7. Organización y generación del resultado**
 
+<p align="justify">
 Finalmente, el sistema organiza los campos procesados y genera un archivo interno de los productos; este archivo almacena los resultados y los registra en la base de datos interna.
-
+</p>
 
 ---
 
@@ -173,10 +195,13 @@ La actualización del formato cotizador se enfocó en prevenir errores frecuente
 
 **Cambios incorporados:**
 
+<p align="justify">
+  
 - **Listas desplegables:** permiten seleccionar opciones disponibles en lugar de escribir libremente determinados datos, lo que ayuda a mantener la información alineada con las opciones configuradas para el cotizador.
 - **Campos obligatorios:** ayudan a evitar que se envíe el formato con información requerida sin completar.
 - **Seguros y restricciones de entrada:** limitan el ingreso de caracteres o valores no válidos en los campos configurados y reducen la posibilidad de capturar la información de manera incorrecta.
 - **Conservación de la estructura del formato:** el uso de la plantilla actualizada busca que los datos permanezcan en las columnas y apartados esperados por la plataforma. Si el usuario elimina filas, agrega cuadros o cambia la estructura, aún pueden presentarse errores de procesamiento.
+</p>
 
 <p align="justify">
 Estas mejoras reducen la libertad de modificar manualmente los campos que deben conservar un formato específico y ayudan a prevenir errores de captura. Sin embargo, no eliminan todos los casos que requieren revisión: los productos especiales o aquellos que no se encuentran en la base de datos pueden necesitar una cotización manual por parte del equipo de ventas.
@@ -191,6 +216,10 @@ Se realizaron dos revisiones de las cotizaciones en tiempos diferentes, una de m
 </p>
 
 * ### Cotización automatizada
+  
+<p align="justify">
+La prueba se ejecutó de manera automatizada mediante la computadora, utilizando un procedimiento programado para evaluar el funcionamiento de la plataforma y el procesamiento de los formatos de cotización. A diferencia de una prueba manual, en la que cada formato se carga y verifica individualmente por una persona, la prueba automatizada permite ejecutar múltiples casos de prueba de forma sistemática y registrar los resultados obtenidos.
+</p>
 
 <p align="justify">
 El objetivo de esta primera prueba fue para comprobar si la plataforma cumplía su función, verificar que los archivos pudieran ser procesados correctamente, que la información válida pudiera utilizarse para generar una cotización y detectar los principales errores que podían presentarse durante el proceso y como podía mejorarse, saber cuales son las métricas en tiempos de cotización y obtener un recuento de las cotizaciones exitosas y erróneas.
@@ -199,7 +228,7 @@ El objetivo de esta primera prueba fue para comprobar si la plataforma cumplía 
 -- **Desarrollo de la prueba** --
 
 <p align="justify">
-La prueba se realizó mediante un flujo dividido en dos etapas principales:
+La prueba se realizó mediante un flujo dividido en dos etapas principales con un total de 4,831 intentos en total:
 </p>
 
 **1. Revisión de los formatos**
@@ -225,7 +254,7 @@ Cada intento era registrado como completado o fallido. En los casos exitosos se 
 * ### Cotización manual
 
 <p align="justify">
-Esta segunda prueba se realizo de manera manual con el objetivo de recaudar mayor información sobre el uso correcto e incorrecto del formato de llenado por parte del usuario y el uso del nuevo formato cotizador y su respuesta, esto para generar un registro mas especifico de los resultados.
+Esta segunda prueba se realizo de manera manual con el objetivo de recaudar mayor información sobre el uso correcto e incorrecto del formato de llenado por parte del usuario y el uso del nuevo formato cotizador y su respuesta, esto para generar un registro mas especifico y hacer una revisión puntualmente de casos en los que se presento error e identificar el formato utilizado en dichas cotizaciones.
 </p>
 
 -- **Desarrollo de la prueba** --
@@ -234,8 +263,9 @@ Esta segunda prueba se realizo de manera manual con el objetivo de recaudar mayo
 Se realizo una prueba general con un total de 411 formatos existentes de productos solicitados por usuarios, se cotizo en un periodo del 14 al 25 de septiembre de 2026, se hizo uso de la plataforma coT4 y el correo para la recepción de las cotizaciones.
 </p>
 
+
 <p align="justify">
-Se cargo en la plataforma de uno por uno de los formatos y se realizo un registro en cuales se llevo a cabo la cotización de manera correcta y en cuales arrojo error según los resultados obtenidos en por correo electrónico, se reviso cada formato que señalo como cotización errónea o no concluida y se verifico si el formato cotizado correspondía al formato anterior o formato actualizado, también se registro los errores mas recurrentes por parte del usuario en el llenado del formato anterior.
+Se cargaron los formatos en la plataforma uno por uno y se llevó a cabo un registro de aquellos en los que la cotización se realizó correctamente y de aquellos en los que se presentó un error, de acuerdo con los resultados recibidos por correo electrónico. Se revisó cada formato señalado como una cotización errónea o no concluida, y se verificó si correspondía al formato anterior o al formato actualizado. Asimismo, se registraron los errores más recurrentes cometidos por los usuarios al llenar el formato anterior.
 </p>
 
 ---
@@ -351,7 +381,7 @@ El 19.1% de cotizaciones que no se pudieron concluir de manera exitosa y marcaro
 </p>
 
 <p align="justify">
-Del total de todas las cotizaciones no concluidas solo se presento un caso en el cual el formato utilizado fue el actualizado y la cotización fue errónea, esto debido a una modificación en el formato en su estructura por parte del usuario.
+Del total de todas las cotizaciones no concluidas solo se presento un caso en el cual el formato utilizado fue el actualizado y la cotización fue errónea, esto debido a una modificación en el formato en su estructura por parte del usuario, específicamente una combinación de celdas lo cual hizo que la base de datos no pudiera reconocer los datos ingresados, sin embargo fue el único caso de error de cotización con el uso del formato nuevo actualiado.
 </p>
 
 <p align="justify">
@@ -399,11 +429,6 @@ Estos productos no se encuentran disponibles dentro de la base de datos utilizad
 <p align="justify">
 En este caso, la cotización no se realizó de manera exitosa debido a que el archivo de entrada no conservó la estructura y el formato establecido para el registro de modificaciones. Como se puede observar en la figura 3, en las columnas correspondientes a las modificaciones 5' y 3' fueron combinadas en una sola celda, eliminando la separación requerida entre ambos extremos de la secuencia. Esta estructura es necesaria para que la plataforma pueda interpretar de manera independiente la modificación correspondiente a cada extremo del oligo.
 </p>
-
-**Figura 4.**
-
-<img width="915" height="336" alt="image" src="https://github.com/user-attachments/assets/ef60b13f-c9d5-40a7-983c-461d649b02d0" />
-
 
 ---
 
