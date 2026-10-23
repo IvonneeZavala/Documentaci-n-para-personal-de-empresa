@@ -301,7 +301,7 @@ Durante la revisión de los formatos se identificaron 90 registros de fallo. Los
 - Problema interno al preparar una carpeta de trabajo: 12 casos.
 
 <p align="justify">
-Estos resultados permitieron identificar principalmente problemas relacionados con la información proporcionada en los formatos y con la estructura esperada por el sistema. También se identificaron algunos problemas internos del proceso que no necesariamente corresponden a errores del usuario ni de la platafoema si no al ingreso de productos que no se encuentran en la base de datos dado que esta unicamente diseñado para la cotización de oligos y sondas.
+Estos resultados permitieron identificar principalmente problemas relacionados con la información proporcionada en los formatos y con la estructura esperada por el sistema. También se identificaron algunos problemas internos del proceso que no necesariamente corresponden a errores del usuario ni de la plataforma, sino al ingreso de productos que no se encuentran en la base de datos, dado que está únicamente diseñado para la cotización de oligos y sondas.
 </p>
 
 **Tiempo de generación de las cotizaciones**
