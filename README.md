@@ -384,14 +384,16 @@ Ejemplos:
 
 **Gráfico 3. Uso incorrecto del formato.**
 
-El 8.5% del total de las cotizaciones presentan un error debido a alguna anomalía ajena al formato cotizador debido al uso incorrecto.
+El 8.5% del total de las cotizaciones presentan un error por la plataforma debido a alguna anomalía ajena al formato cotizador, entre los principales casos se encuentran: 
+* Solicitud de productos como enzimas, kits, material, etc., los cuales no se encuentran disponibles en el catálogo de productos disponibles en el formato cotizador.
+* Modificaciones en la estructura del formato cotizador como combinación de celdas o eliminación de columnas.
 
 <p align="justify">
 El 19.1% de cotizaciones que no se pudieron concluir de manera exitosa y marcaron como error en la plataforma, presentan un patrón marcado en ser realizadas con el formato de llenado anterior, el cual no cuenta con las listas despegables y el usuario tenia mayor libertad para realizar el llenado de este que resulta de una manera incorrecta.
 </p>
 
 <p align="justify">
-Del total de todas las cotizaciones no concluidas solo se presento un caso en el cual el formato utilizado fue el actualizado y la cotización fue errónea, esto debido a una modificación en el formato en su estructura por parte del usuario, específicamente una combinación de celdas lo cual hizo que la base de datos no pudiera reconocer los datos ingresados, sin embargo fue el único caso de error de cotización con el uso del formato nuevo actualiado.
+Del total de todas las cotizaciones no concluidas solo se presento un caso en el cual el formato utilizado fue el actualizado y la cotización fue errónea, esto debido a una modificación en el formato en su estructura por parte del usuario, específicamente una combinación de celdas lo cual hizo que la base de datos no pudiera reconocer los datos ingresados, sin embargo fue el único caso de error de cotización con el uso del formato nuevo actualizado.
 </p>
 
 <p align="justify">
@@ -412,7 +414,9 @@ El resto de las cotizaciones erróneas o no concluidas corresponden al uso del f
 <img width="1535" height="230" alt="imagen" src="https://github.com/user-attachments/assets/85c83225-940e-4a28-8aea-0e8d42b28057" />
 
 <p align="justify">
-Este tipo de situaciones marcara como error por la plataforma y no precisamente porque sea incorrecta la solicitud del usuario o sea imposible la cotización del producto solicitado, el problema persiste en que debido a que el cotizador funciona con productos previamente registrados en su base de datos, cuando el usuario solicita un producto que no se encuentra disponible en dicha base, el sistema no puede identificarlo y, por lo tanto, no puede generar automáticamente su cotización.
+Este tipo de situaciones marcara como error por la plataforma y no precisamente porque sea incorrecta la solicitud del usuario o sea imposible la cotización del producto solicitado, el problema persiste en que debido a que el cotizador funciona con productos previamente registrados en su base de datos específicamente los productos PRIMER STD, PRIMER C/MOD, SONDA STARQ™, SONDA STARQ™ PLUS, SONDA STARQ™ PRIME, SONDA STARQ™ POLARIS, T4BRICK™, T4GENE™, ARN.
+
+Cuando el usuario solicita un producto que no se encuentra disponible en la base de datos, el sistema no puede identificarlo y, por lo tanto, no puede generar automáticamente su cotización.
 </p>
 
 <p align="justify">
