@@ -311,9 +311,9 @@ Para los 1,385 procesos de cotización que concluyeron correctamente, se registr
 </p>
 
 - Mediana: 28 segundos
-- Promedio: 48 segundos
+- Promedio: 46 segundos
 - Tiempo mínimo: 3 segundos
-- Tiempo máximo: 17 minutos y 14 segundos
+- Tiempo máximo: 9 minutos y 30 segundos
 
 <p align="justify">
 La mediana de 28 segundos representa una referencia más cercana al tiempo de ejecución de un caso típico, mientras que el promedio se incrementó debido a algunos procesos que requirieron un tiempo considerablemente mayor. 
