@@ -23,7 +23,7 @@ Al completar todas las casillas de su formato cotizador, deberá guardarse el Ex
 
 Al oprimir el botón **“Enviar cotización”**, la interfaz deberá realizar las siguientes acciones:
 1. Cambio en la velocidad de la animación de las letras **“A”**, **“T”**, **“C”** y **“G”**, aumentando su velocidad para indicar que el proceso se encuentra en ejecución.
-2. Actualiación en el estado del proceso. La leyenda ubicada en la parte inferior, que inicialmente muestra **“READY”**, deberá cambiar a **“Processing”** mientras se procesa la solicitud.
+2. Actualización en el estado del proceso. La leyenda ubicada en la parte inferior, que inicialmente muestra **“READY”**, deberá cambiar a **“Processing”** mientras se procesa la solicitud.
 <img width="1364" height="655" alt="image" src="https://github.com/user-attachments/assets/7e26eb9b-66d8-40dd-8a54-8a1299fb5639" />
 
 3. Mostrar el resultado del proceso en la parte superior derecha de la interfaz
@@ -321,7 +321,7 @@ La mediana de 28 segundos representa una referencia más cercana al tiempo de ej
 
 <p align="justify">
 El caso de mayor duración real fue de 14 horas, 29 minutos y 2 segundos, sin embargo, no se tomo en cuenta ya que se considera un comportamiento fuera de lo común ajeno al desempeño de la plataforma que podría requerir una revisión adicional.
-El tiempo máximo tomado en cuenta para los cálculos fue de 9 minutos y 30 segundos, los casos con mayor tiempo se atribuye a la cotización con un número mayor de secuencias de lo normal en las cuales su procesamiento y elaboración del blast de cada una de estas alargan el tiempo de espera para recibir la cotización, esta es la razón por la cual existe el alargamiento de tiempo en recibir las cotizaciones dependienso de la cantidad de secuencias a cotizar.
+El tiempo máximo tomado en cuenta para los cálculos fue de 9 minutos y 30 segundos, los casos con mayor tiempo se atribuye a la cotización con un número mayor de secuencias en las cuales su procesamiento y elaboración del blast de cada una de estas alargan el tiempo de espera para recibir la cotización, esta es la razón por la cual existe el alargamiento de tiempo en recibir las cotizaciones dependiendo de la cantidad de secuencias a cotizar.
 </p>
 
 <p align="justify">
