@@ -358,7 +358,7 @@ Variaciones posibles:
 </table>
 
 - Formato anterior: No cuenta con las listas desplegables.
-- Formato diferente: Uso incorrecto del formato. Ej.: Solicitud de productos no dispoibles en el catálago como enzimas, kits u modificaciones en la estructura del formato cotizador.
+- Formato diferente: Uso incorrecto del formato. Ej.: Solicitud de productos no disponibles en el catálogo como enzimas, kits u modificaciones en la estructura del formato cotizador.
 - Formato correcto: Cuenta los las listas desplegables y seguros para el correcto ingreso de información por el usuario.
 
 <img width="518" height="320" alt="Recuento de cotizaciones" src="https://github.com/user-attachments/assets/c8090ea2-aed7-4721-88f4-79d706ede965" />
@@ -449,7 +449,7 @@ En este caso, la cotización no se realizó de manera exitosa debido a que el ar
 ### Solución de problemas, mejoras implementadas en el nuevo formato cotizador
 
 <p align="justify">
-Los situaciones mas frecuentes ya identificados por los cuales no es posible cerrar la cotización con éxito corresponden al formato cotizador anterior, las modificaciones realizadas en el formato actualizado se diseñaron de manera que estos errores por parte del usuario ya no fueran posibles con la implementación de campos de llenado de caracter obligatorio, listas despegables y seguros.
+Los situaciones mas frecuentes ya identificados por los cuales no es posible cerrar la cotización con éxito corresponden al formato cotizador anterior, las modificaciones realizadas en el formato actualizado se diseñaron de manera que estos errores por parte del usuario ya no fueran posibles con la implementación de campos de llenado de carácter obligatorio, listas despegables y seguros.
 </p>
 
 **Figura 4. Formato cotizador actualizado.**
