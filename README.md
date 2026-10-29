@@ -7,7 +7,9 @@ Una introducción a la plataforma coT4, qué es, su creación y funcionamiento.
 Cotizador en línea comercial diseñado para optimizar el proceso de venta y atención al cliente, una cotización inmediata que transforma rápidamente la solicitud del cliente en un ticket de compra a través de su correo electrónico.
 </p>
 
-Puede ingresar a la plataforma a través del siguiente link: https://docker.t4oligo.com/#:~:text=Acciones%20Principales%20Enviar%20Cotizaci%C3%B3n%20Limpiar%20Formulario
+Puede ingresar a la plataforma a través del siguiente link: 
+
+https://docker.t4oligo.com/#:~:text=Acciones%20Principales%20Enviar%20Cotizaci%C3%B3n%20Limpiar%20Formulario
 
 <p align="justify">
 Para llevar a cabo su cotización, deberá ingresar y, como primer paso, se deberá descargar la plantilla del formato cotizador en el botón <strong>“Descargar plantilla”</strong> y se abrirá el Excel, el cual contiene diferentes apartados que se deben llenar de manera completa y correcta. Se observarán los apartados de <strong>“Datos de envío”</strong>, <strong>“Datos de facturación”</strong> y, seguido de estos, el apartado general para la solicitud del producto con sus especificaciones.
@@ -321,7 +323,7 @@ La mediana de 28 segundos representa una referencia más cercana al tiempo de ej
 
 <p align="justify">
 El caso de mayor duración real fue de 14 horas, 29 minutos y 2 segundos, sin embargo, no se tomo en cuenta ya que se considera un comportamiento fuera de lo común ajeno al desempeño de la plataforma que podría requerir una revisión adicional.
-El tiempo máximo tomado en cuenta para los cálculos fue de 9 minutos y 30 segundos, los casos con mayor tiempo se atribuye a la cotización con un número mayor de secuencias en las cuales su procesamiento y elaboración del blast de cada una de estas alargan el tiempo de espera para recibir la cotización, esta es la razón por la cual existe el alargamiento de tiempo en recibir las cotizaciones dependiendo de la cantidad de secuencias a cotizar.
+El tiempo máximo tomado en cuenta para los cálculos fue de 9 minutos y 30 segundos, los casos con mayor tiempo se atribuye a la cotización con un número mayor de secuencias en las cuales su procesamiento y elaboración del blast de cada una de estas alargan el tiempo de espera para recibir bla cotización, esta es la razón por la cual existe el alargamiento de tiempo en recibir las cotizaciones dependiendo de la cantidad de secuencias a cotizar.
 </p>
 
 <p align="justify">
